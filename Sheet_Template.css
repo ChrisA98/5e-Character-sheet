@@ -1,0 +1,15 @@
+::placeholder{
+    color: rgb(61, 61, 61);
+    font-style: italic;
+  }
+  
+  
+  .sheet-container {
+    display: inline;
+    width: 800px;
+    height: fit-content;
+    font-size: 13px;
+    font-family:'Franklin Gothic Medium';
+    --border-color:rgb(166, 85, 85);
+    --blocking-color: rgb(76, 14, 14);
+  }
