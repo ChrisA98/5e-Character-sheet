@@ -1,7 +1,221 @@
 <div class= "sheet-container">
-    <div class= "header-section">
-        <img src="https://github.com/ChrisA98/IslesOfWar/blob/main/Project/Assets/Import_Textures/Cobble_01.png?raw=true">
-        <img>
+    <div class= "header-bar">
+        <img src="https://github.com/ChrisA98/5e-Character-sheet/blob/main/res/download.png?raw=true" style="height:40px" class="header-image"></img>
+
+        <div clas="header-sheet-version-box">
+            <input type="text" class="input" value = 0.0.1 disabled = "true"></input>
+        </div>        
+        <div class="header-sheet-version-text">Sheet Version</div>
+
+        <div clas="header-sheet-charname-box">
+            <input type="text" class="input"></input>
+        </div>
+        <div class="header-sheet-charname-text">Character Name</div>
+
+        <div clas="header-sheet-race-box">
+            <input type="text" class="input"></input>
+        </div>
+        <div class="header-sheet-race-text">Race</div>
+
+        <div clas="header-sheet-class-box">
+            <input type="text" class="input"></input>
+        </div>
+        <div class="header-sheet-class-text">Class</div>
+        <button class="header-sheet-gear" style="font-family:Pictos;">y</button>
     </div>
 
+    <div class="page-buttons-area">
+        <input type="hidden" class="main-page-toggle" name="attr_main_page_toggle" value="core" />
+        <button type="action" class="basic-button page-buttons-0" name = "act_page_core">Core Stats</button>
+        <button type="action" class="basic-button page-buttons-1" name = "act_page_skills">Skills</button>
+        <button type="action" class="basic-button page-buttons-2" name = "act_page_background">Background</button>
+        <button type="action" class="basic-button page-buttons-3" name = "act_page_class">Class</button>
+        <button type="action" class="basic-button page-buttons-4" name = "act_page_weapons">Weapons</button>
+        <button type="action" class="basic-button page-buttons-5" name = "act_page_spells">Spellbook</button>
+        <button type="action" class="basic-button page-buttons-6" name = "act_page_armor">Armor</button>
+        <button type="action" class="basic-button page-buttons-7" name = "act_page_inventory">Inventory</button>
+        <button type="action" class="basic-button page-buttons-8" name = "act_page_show_all">Show All</button>
+    </div>
+    
+    <input type="hidden" class="main-page-toggle" name="attr_main_page_toggle" value="core"></input>
+    <div class="core-stats-page">
+        <div class="core-stats">
+            <div class="core-stats-label">
+                Core Stats
+            </div>
+            <div class="core-stats-header-bar">                
+            </div>
+            <div class="core-stats-header-1">
+                Score
+            </div>
+            <div class="core-stats-header-2">
+                Mod
+            </div>
+            <div class="core-stats-header-3">
+                Prof?
+            </div>
+            <div class="core-stats-header-4">
+                Save Mod
+            </div>
+            <div class="core-stats-header-5">
+                Save
+            </div>
+
+            <input type="number" class="core-stats-str-1 input-stats " name="attr_strength" value="8" min="0" />
+            <div class="core-stats-str-2">
+                STR
+            </div>
+            <input type="number" class="core-stats-str-3 input-stats " name="attr_strength_modifier" value="5" readonly/>
+            <input type="checkbox" class="core-stats-str-4 checkbox-small" name="attr_strength_save_prof"/>
+            <input type="number" class="core-stats-str-5 input-stats " name="attr_strength_save_modifier" value="5"readonly/>
+            <button class="core-stats-str-6 basic-button " name="attr_strength_modifier" style="font-family:dicefontd20;" >t</button>
+            <button class="core-stats-str-7 basic-button" style="font-family:Pictos;">y</button>
+
+            <input type="number" class="core-stats-dex-1 input-stats " name="attr_dexterity" value="8" min="0" />
+            <div class="core-stats-dex-2">
+                DEX
+            </div>
+            <input type="number" class="core-stats-dex-3 input-stats " name="attr_dexterity_modifier" value="5"readonly/>
+            <input type="checkbox" class="core-stats-dex-4 checkbox-small" name="attr_dexterity_save_prof"/>
+            <input type="number" class="core-stats-dex-5 input-stats " name="attr_dexterity_save_modifier" value="5"readonly/>
+            <button class="core-stats-dex-6 basic-button " style="font-family:dicefontd20;" >t</button>
+            <button class="core-stats-dex-7 basic-button" style="font-family:Pictos;">y</button>
+            
+            <input type="number" class="core-stats-con-1 input-stats " name="attr_constitution" value="8" min="0" />
+            <div class="core-stats-con-2">
+                CON
+            </div>
+            <input type="number" class="core-stats-con-3 input-stats " name="attr_constitution_modifier" value="5"readonly/>
+            <input type="checkbox" class="core-stats-con-4 checkbox-small" name="attr_constitution_save_prof"/>
+            <input type="number" class="core-stats-con-5 input-stats " name="attr_constitution_save_modifier" value="5"readonly/>
+            <button class="core-stats-con-6 basic-button " name="attr_constitution_modifier" style="font-family:dicefontd20;" >t</button>
+            <button class="core-stats-con-7 basic-button" style="font-family:Pictos;">y</button>
+            
+            <input type="number" class="core-stats-int-1 input-stats " name="attr_intelligence" value="8" min="0" />
+            <div class="core-stats-int-2">
+                INT
+            </div>
+            <input type="number" class="core-stats-int-3 input-stats " name="attr_intelligence_modifier" value="5"readonly/>
+            <input type="checkbox" class="core-stats-int-4 checkbox-small" name="attr_intelligence_save_prof"/>
+            <input type="number" class="core-stats-int-5 input-stats " name="attr_intelligence_save_modifier" value="5"readonly/>
+            <button class="core-stats-int-6 basic-button " name="attr_intelligence_modifier" style="font-family:dicefontd20;" >t</button>
+            <button class="core-stats-int-7 basic-button" style="font-family:Pictos;">y</button>
+
+            <input type="number" class="core-stats-wis-1 input-stats " name="attr_wisdom" value="8" min="0" />
+            <div class="core-stats-wis-2">
+                WIS
+            </div>
+            <input type="number" class="core-stats-wis-3 input-stats " name="attr_wisdom_modifier" value="5"readonly/>
+            <input type="checkbox" class="core-stats-wis-4 checkbox-small" name="attr_wisdom_save_prof"/>
+            <input type="number" class="core-stats-wis-5 input-stats " name="attr_wisdom_save_modifier" value="5"readonly/>
+            <button class="core-stats-wis-6 basic-button " name="attr_wisdom_modifier" style="font-family:dicefontd20;" >t</button>
+            <button class="core-stats-wis-7 basic-button" style="font-family:Pictos;">y</button>
+            
+            <input type="number" class="core-stats-cha-1 input-stats " name="attr_charisma" value="8" min="0" />
+            <div class="core-stats-cha-2">
+                CHA
+            </div>
+            <input type="number" class="core-stats-cha-3 input-stats " name="attr_charisma_modifier" value="5"readonly/>
+            <input type="checkbox" class="core-stats-cha-4 checkbox-small" name="attr_charisma_save_prof"/>
+            <input type="number" class="core-stats-cha-5 input-stats " name="attr_charisma_save_modifier" value="5"readonly/>
+            <button class="core-stats-cha-6 basic-button " name="attr_charisma_modifier" style="font-family:dicefontd20;" >t</button>
+            <button class="core-stats-cha-7 basic-button" style="font-family:Pictos;">y</button>
+
+
+        </div>
+
+
+        <div class="hitpoints testing-blocks">
+            hitpoints
+        </div>
+        <div class="init-ac testing-blocks">
+            init-ac
+        </div>
+        <div class="lvl-exp testing-blocks">
+            lvl-exp
+        </div>
+        <div class="bonuses testing-blocks">
+            bonuses
+        </div>
+        <div class="hit-dice testing-blocks">
+            hit-dice
+        </div>
+        <div class="other-mp testing-blocks">
+            other-mp
+        </div>
+    </div>
 </div>
+
+
+<script type="text/worker">
+
+
+
+    // Switch Main Pages
+    const pageList = ["core","skills", "background", "class","weapons","spells","armor","inventory","show_all"];
+    pageList.forEach(button => {
+        on(`clicked:page_${button}`, function() {
+
+            console.log(`${button}`);
+            setAttrs({
+                [`main_page_toggle`]: `${button}`
+            });
+            getAttrs([`main_page_toggle`], v =>{
+                console.log(v);
+            });
+        });
+    });
+    const stats = ["strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma",]
+	const skills_dict = {
+		"STR": ["athletics", "custom_STR_1"],
+		"DEX": ["acrobatics", "stealth", "thievery", "performance","custom_DEX_1"],
+		"INT": ["arcana","crafting","investigation","nature","studies","custom_INT_1"],
+		"VIT": ["custom_VIT_1"],
+		"WIS": ["animal_handling","survival","perception","intuition","medicine","custom_WIS_1"],
+		"PER": ["diplomacy","deception","intimidation","custom_PER_1"],
+		"SPT": ["communion","custom_SPT_1"],
+		}
+		
+	const skills_display_dict = {
+		"STR": "Strength",
+		"DEX": "Dexterity",
+		"CON": "Constitution",
+		"INT": "Intelligence",
+		"WIS": "Wisdom",
+		"CHA": "Charisma",
+		}
+    
+    // Changes made to skills
+	stats.forEach(stat => {
+		on(`change:${stat} change:${stat}_save_prof change:prof sheet:opened: change:spellcasting_training change:spellcasting_ability`, function(){					
+			getAttrs([stat], function(values){
+				// Error check for values over 30
+					if (values[stat] > 30){
+						setAttrs({
+							[`${stat}`]: 30
+						});
+						values[stat] = 30
+					}
+					if (stat === "STR"){
+						setAttrs({
+							["carry_capacity"]: values[stat]*15
+						});
+					}
+					if (stat === "VIT"){
+						setAttrs({
+							["death-lvls-max"]: values[stat]
+						});
+					}
+
+					let mod = Math.floor((values[stat]-10)/2);
+					
+					// Update bonuses for stat
+					setAttrs({
+						[`${stat}_modifier`] : mod
+					});
+
+			});
+		});
+    });
+
+</script>
