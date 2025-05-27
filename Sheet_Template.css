@@ -302,7 +302,7 @@ input::-webkit-inner-spin-button {
     border-radius: 10px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    background-image: url("/shared-assets/images/examples/lizard.png");
+    background-image: url("https://github.com/ChrisA98/5e-Character-sheet/blob/main/res/parchment%20paper%20div%20test.jpg?raw=true");
   }
     
   .core-stats{
