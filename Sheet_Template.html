@@ -1,26 +1,29 @@
 <div class= "sheet-container">
     <div class= "header-bar">
-        <img src="https://github.com/ChrisA98/5e-Character-sheet/blob/main/res/download.png?raw=true" style="height:40px" class="header-image"></img>
+        <img name="attr_character_avatar" class="header-image"></img>
 
-        <div clas="header-sheet-version-box">
-            <input type="text" class="input" value = 0.0.1 disabled = "true"></input>
-        </div>        
         <div class="header-sheet-version-text">Sheet Version</div>
 
-        <div clas="header-sheet-charname-box">
-            <input type="text" class="input"></input>
-        </div>
+        <input type="text" class="header-sheet-charname-box input"/>
         <div class="header-sheet-charname-text">Character Name</div>
 
-        <div clas="header-sheet-race-box">
-            <input type="text" class="input"></input>
-        </div>
+        <input type="text" class="header-sheet-race-box input"/>
         <div class="header-sheet-race-text">Race</div>
 
-        <div clas="header-sheet-class-box">
-            <input type="text" class="input"></input>
-        </div>
+        <input type="text" class="header-sheet-level-box input" disabled/>
+        <div class="header-sheet-level-text">Level</div>
+
+        <input type="text" class="header-sheet-bg-box input" disabled/>
+        <div class="header-sheet-bg-text">Background</div>
+
+        <input type="text" class=" header-sheet-class-box input" disabled/>
         <div class="header-sheet-class-text">Class</div>
+
+        <input type="text" class=" header-sheet-subclass-box input"/>
+        <div class="header-sheet-subclass-text">Subclass</div>
+
+        <input type="text" class="input header-sheet-version-box" style="text-align: center !important;" value = 0.0.0 disabled = "true"/>
+
         <button class="header-sheet-gear" style="font-family:Pictos;">y</button>
     </div>
 
@@ -39,11 +42,14 @@
     
     <input type="hidden" class="main-page-toggle" name="attr_main_page_toggle" value="core"></input>
     <div class="core-stats-page">
+
+        
+        <!-- Ability Scores and Saves Section -->
         <div class="core-stats">
-            <div class="core-stats-label">
+            <div class="core-stats-label dark-label-bar">
                 Core Stats
             </div>
-            <div class="core-stats-header-bar">                
+            <div class="core-stats-header-bar light-label-bar">                
             </div>
             <div class="core-stats-header-1">
                 Score
@@ -68,7 +74,7 @@
             <input type="number" class="core-stats-str-3 input-stats " name="attr_strength_modifier" value="5" readonly/>
             <input type="checkbox" class="core-stats-str-4 checkbox-small" name="attr_strength_save_prof"/>
             <input type="number" class="core-stats-str-5 input-stats " name="attr_strength_save_modifier" value="5"readonly/>
-            <button class="core-stats-str-6 basic-button " name="attr_strength_modifier" style="font-family:dicefontd20;" >t</button>
+            <button class="core-stats-str-6 roll-button " name="attr_strength_modifier" style="font-family:dicefontd20;" >t</button>
             <button class="core-stats-str-7 basic-button" style="font-family:Pictos;">y</button>
 
             <input type="number" class="core-stats-dex-1 input-stats " name="attr_dexterity" value="8" min="0" />
@@ -78,7 +84,7 @@
             <input type="number" class="core-stats-dex-3 input-stats " name="attr_dexterity_modifier" value="5"readonly/>
             <input type="checkbox" class="core-stats-dex-4 checkbox-small" name="attr_dexterity_save_prof"/>
             <input type="number" class="core-stats-dex-5 input-stats " name="attr_dexterity_save_modifier" value="5"readonly/>
-            <button class="core-stats-dex-6 basic-button " style="font-family:dicefontd20;" >t</button>
+            <button class="core-stats-dex-6 roll-button " style="font-family:dicefontd20;" >t</button>
             <button class="core-stats-dex-7 basic-button" style="font-family:Pictos;">y</button>
             
             <input type="number" class="core-stats-con-1 input-stats " name="attr_constitution" value="8" min="0" />
@@ -88,7 +94,7 @@
             <input type="number" class="core-stats-con-3 input-stats " name="attr_constitution_modifier" value="5"readonly/>
             <input type="checkbox" class="core-stats-con-4 checkbox-small" name="attr_constitution_save_prof"/>
             <input type="number" class="core-stats-con-5 input-stats " name="attr_constitution_save_modifier" value="5"readonly/>
-            <button class="core-stats-con-6 basic-button " name="attr_constitution_modifier" style="font-family:dicefontd20;" >t</button>
+            <button class="core-stats-con-6 roll-button " name="attr_constitution_modifier" style="font-family:dicefontd20;" >t</button>
             <button class="core-stats-con-7 basic-button" style="font-family:Pictos;">y</button>
             
             <input type="number" class="core-stats-int-1 input-stats " name="attr_intelligence" value="8" min="0" />
@@ -98,7 +104,7 @@
             <input type="number" class="core-stats-int-3 input-stats " name="attr_intelligence_modifier" value="5"readonly/>
             <input type="checkbox" class="core-stats-int-4 checkbox-small" name="attr_intelligence_save_prof"/>
             <input type="number" class="core-stats-int-5 input-stats " name="attr_intelligence_save_modifier" value="5"readonly/>
-            <button class="core-stats-int-6 basic-button " name="attr_intelligence_modifier" style="font-family:dicefontd20;" >t</button>
+            <button class="core-stats-int-6 roll-button " name="attr_intelligence_modifier" style="font-family:dicefontd20;" >t</button>
             <button class="core-stats-int-7 basic-button" style="font-family:Pictos;">y</button>
 
             <input type="number" class="core-stats-wis-1 input-stats " name="attr_wisdom" value="8" min="0" />
@@ -108,7 +114,7 @@
             <input type="number" class="core-stats-wis-3 input-stats " name="attr_wisdom_modifier" value="5"readonly/>
             <input type="checkbox" class="core-stats-wis-4 checkbox-small" name="attr_wisdom_save_prof"/>
             <input type="number" class="core-stats-wis-5 input-stats " name="attr_wisdom_save_modifier" value="5"readonly/>
-            <button class="core-stats-wis-6 basic-button " name="attr_wisdom_modifier" style="font-family:dicefontd20;" >t</button>
+            <button class="core-stats-wis-6 roll-button " name="attr_wisdom_modifier" style="font-family:dicefontd20;" >t</button>
             <button class="core-stats-wis-7 basic-button" style="font-family:Pictos;">y</button>
             
             <input type="number" class="core-stats-cha-1 input-stats " name="attr_charisma" value="8" min="0" />
@@ -118,30 +124,240 @@
             <input type="number" class="core-stats-cha-3 input-stats " name="attr_charisma_modifier" value="5"readonly/>
             <input type="checkbox" class="core-stats-cha-4 checkbox-small" name="attr_charisma_save_prof"/>
             <input type="number" class="core-stats-cha-5 input-stats " name="attr_charisma_save_modifier" value="5"readonly/>
-            <button class="core-stats-cha-6 basic-button " name="attr_charisma_modifier" style="font-family:dicefontd20;" >t</button>
+            <button class="core-stats-cha-6 roll-button " name="attr_charisma_modifier" style="font-family:dicefontd20;" >t</button>
             <button class="core-stats-cha-7 basic-button" style="font-family:Pictos;">y</button>
 
 
         </div>
 
+        <!-- Hitpoints and Speed Section -->
+        <div class="hitpoints">
+            <div class="hitpoints-label dark-label-bar">
+                Hit Points and Speed
+            </div>
+            <input type="number" class="hp-current-box input-stats " name="attr_current_hitpoints" value="0" min="0" />
+            <div class="hp-current-text">
+                Current HP
+            </div>
+            <input type="number" class="hp-max-box input-stats " name="attr_max_hitpoints" value="0" min="0" />
+            <div class="hp-max-text">
+                Max HP
+            </div>
+            <input type="number" class="temp-hp-box input-stats " name="attr_temp_hitpoints" value="0" min="0" />
+            <div class="temp-hp-text">
+                Temp HP
+            </div>
+            <input type="number" class="speed-box input-stats " name="attr_speed" value="0" min="0" />
+            <div class="speed-text">
+                Speed
+            </div>
+            <!--
+            <div class="hp-blocking"></div>
+            <div class="speed-blocking"></div>
+            -->
+        </div>
 
-        <div class="hitpoints testing-blocks">
-            hitpoints
+        <!-- Initiative and AC Section -->
+        <div class="init-ac">
+            <div class="init-label dark-label-bar">
+                Initiative
+            </div>
+            <input type="number" class="initiative-bonus-box input-stats " name="attr_initiative_bonus" value="0" min="0" />
+            <div class="initiative-bonus-text">
+                Bonus
+            </div>
+            <input type="number" class="initiative-total-box input-stats " name="attr_initiative_total" value="0" min="0" disabled/>
+            <div class="initiative-total-text">
+                Total
+            </div>
+            <button class="initiative-roll roll-button " name="attr_strength_modifier" style="font-family:dicefontd20;" >t</button>
+
+            
+            <div class="ac-label dark-label-bar">
+                Armour Class
+            </div>
+            <input type="number" class="ac-modified-box input-stats " name="attr_modified_ac" value="0" min="0" disabled/>
+            <div class="ac-modified-text">
+                Armored
+            </div>
+            <input type="number" class="ac-natural-box input-stats " name="attr_natural_ac" value="0" min="0" disabled/>
+            <div class="ac-natural-text">
+                Unarmored
+            </div>
         </div>
-        <div class="init-ac testing-blocks">
-            init-ac
+
+        <!-- Level and experience Section -->
+        <div class="lvl-exp">            
+            <div class="lvl-label dark-label-bar">
+                Level and Experience
+            </div>
+            <input type="number" class="cs-level-box input-stats " name="attr_total_level" value="0" min="0" />
+            <div class="cs-level-text">
+                Character Level
+            </div>
+            <input type="number" class="cs-prof-box input-stats " name="attr_proficiency_bonus" value="0" min="0" />
+            <div class="cs-prof-text">
+                Proficiency Bonus
+            </div>
+
+            <input type="number" class="cs-c-exp-box input-stats " name="attr_current_exp" value="0" min="0" />
+            <div class="cs-c-exp-text">
+                Current EXP
+            </div>
+
+            <input type="number" class="cs-exp-next-level-box input-stats " name="attr_exp_next_level" value="0" min="0" />
+            <div class="cs-exp-next-level-text">
+                EXP for next level
+            </div>
         </div>
-        <div class="lvl-exp testing-blocks">
-            lvl-exp
+
+        <!-- Temporary Bonuses Section -->
+        <div class="bonuses">               
+            <div class="bonuses-label dark-label-bar">
+                Bonuses/Penalties
+            </div>
+            <div class="bonuses-melee-header-bar light-label-bar">
+                Melee
+            </div>
+            <input type="number" class="bonuses-melee-atk-box input-stats " name="attr_melee_attack_roll_bonus" value="0" min="0" />
+            <div class="bonuses-melee-atk-text">
+                Attack
+            </div>
+            <input type="number" class="bonuses-melee-dmg-box input-stats " name="attr_melee_damage_roll_bonus" value="0" min="0" />
+            <div class="bonuses-melee-dmg-text">
+                Damage
+            </div>
+
+            <div class="bonuses-ranged-header-bar light-label-bar">
+                Ranged
+            </div>
+            <input type="number" class="bonuses-ranged-atk-box input-stats " name="attr_ranged_attack_roll_bonus" value="0" min="0" />
+            <div class="bonuses-ranged-atk-text">
+                Attack
+            </div>
+            <input type="number" class="bonuses-ranged-dmg-box input-stats " name="attr_ranged_damage_roll_bonus" value="0" min="0" />
+            <div class="bonuses-ranged-dmg-text">
+                Damage
+            </div>
+
+            <div class="bonuses-spellcasting-header-bar light-label-bar">
+                Spellcasting
+            </div>
+            <input type="number" class="bonuses-spellcasting-atk-box input-stats " name="attr_spell_attack_bonus" value="0" min="0" />
+            <div class="bonuses-spellcasting-atk-text">
+                Attack
+            </div>
+            <input type="number" class="bonuses-spellcasting-dmg-box input-stats " name="attr_spell_damage_bonus" value="0" min="0" />
+            <div class="bonuses-spellcasting-dmg-text">
+                Damage
+            </div>
+            <input type="number" class="bonuses-spellcasting-save-box input-stats " name="attr_spell_save_bonus" value="0" min="0" />
+            <div class="bonuses-spellcasting-save-text">
+                Save
+            </div>
+
+            <div class="bonuses-skills-header-bar light-label-bar">
+                Saves and Skill Checks
+            </div>
+            <input type="number" class="bonuses-skills-saves-box input-stats " name="attr_saving_throw_bonus" value="0" min="0" />
+            <div class="bonuses-skills-saves-text">
+                Saving Throws
+            </div>
+            <input type="number" class="bonuses-skills-checks-box input-stats " name="attr_skill_check_bonus" value="0" min="0" />
+            <div class="bonuses-skills-checks-text">
+                Skill Checks
+            </div>
         </div>
-        <div class="bonuses testing-blocks">
-            bonuses
+
+        <!-- Hit Dice and Resting Section -->
+        <div class="hit-dice">        
+            <div class="hd-label dark-label-bar">
+                Resting & Hit Dice
+            </div>
+
+            <div class="hd-header-bar light-label-bar"></div>
+            <div class="hd-header-bar-text-1 ">
+                Rest
+            </div>
+            <div class="hd-header-bar-text-2 ">
+                Hit Dice
+            </div>
+            <div class="hd-header-bar-text-3 ">
+                Current
+            </div>
+            <div class="hd-header-bar-text-4 ">
+                Max
+            </div>
+            
+            <button class="hd-long-button basic-button">Long Rest</button>
+            <button class="hd-short-button basic-button">Short Rest</button>
+
+            <div class="hd-d6-text">
+                d6
+            </div>
+            <div class="hd-d8-text">
+                d8
+            </div>
+            <div class="hd-d10-text">
+                d10
+            </div>
+            <div class="hd-d12-text">
+                d12
+            </div>
+
+            <input type="number" class="hd-d6-box input-stats" name="attr_d6_hitdice" value="0" min="0" />
+            <input type="number" class="hd-d8-box input-stats" name="attr_d8_hitdice" value="0" min="0" />
+            <input type="number" class="hd-d10-box input-stats" name="attr_d10_hitdice" value="0" min="0" />
+            <input type="number" class="hd-d12-box input-stats" name="attr_d12_hitdice" value="0" min="0" />
+
+            <input type="number" class="hd-d6-max input-stats" name="attr_d6_hitdice" value="0" min="0" disabled/>
+            <input type="number" class="hd-d8-max input-stats" name="attr_d8_hitdice" value="0" min="0" disabled/>
+            <input type="number" class="hd-d10-max input-stats" name="attr_d10_hitdice" value="0" min="0" disabled/>
+            <input type="number" class="hd-d12-max input-stats" name="attr_d12_hitdice" value="0" min="0" disabled/>
+
+            <button class="hd-d6-roll roll-button">t</button>
+            <button class="hd-d8-roll roll-button">t</button>
+            <button class="hd-d10-roll roll-button">t</button>
+            <button class="hd-d12-roll roll-button">t</button>
+            
+            
         </div>
-        <div class="hit-dice testing-blocks">
-            hit-dice
-        </div>
-        <div class="other-mp testing-blocks">
-            other-mp
+
+        <!-- Other Section -->
+        <div class="other-mp">
+                       
+            <div class="other-label dark-label-bar">
+                Other
+            </div>
+
+            <div class="inspo-header-bar light-label-bar">
+                Inspiration
+            </div>
+            <input type="checkbox" class="inspo-checkbox checkbox-small" name="attr_inspiration"/>
+
+
+            <div class="deathsave-header-bar light-label-bar">
+                Death Saving Throw
+            </div>
+
+            <div class="deathsave-success-text">
+                Success
+            </div>
+            <input type="checkbox" class="deathsave-success-check-1 checkbox-small" name="attr_ds_success_1"/>
+            <input type="checkbox" class="deathsave-success-check-2 checkbox-small" name="attr_ds_success_2"/>
+            <input type="checkbox" class="deathsave-success-check-3 checkbox-small" name="attr_ds_success_3"/>
+
+            <div class="deathsave-fail-text">
+                Failure
+            </div>
+            <input type="checkbox" class="deathsave-fail-check-1 checkbox-small" name="attr_ds_fail_1"/>
+            <input type="checkbox" class="deathsave-fail-check-2 checkbox-small" name="attr_ds_fail_2"/>
+            <input type="checkbox" class="deathsave-fail-check-3 checkbox-small" name="attr_ds_fail_3"/>
+
+
+            <button class="deathsave-roll basic-button">Death Save</button>
+            <button class="deathsave-settings roll-button" style="font-family:Pictos;">y</button>
+
         </div>
     </div>
 </div>
