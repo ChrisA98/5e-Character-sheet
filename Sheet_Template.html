@@ -21,8 +21,8 @@
         <span class=" header-sheet-class-box input" name="attr_classes"></span>
         <div class="header-sheet-class-text">Class</div>
 
-        <span class=" header-sheet-subclass-box input" name="attr_subclass" ></span>
-        <div class="header-sheet-subclass-text">Subclass</div>
+        <span class=" header-sheet-subclass-box input" name="attr_subclass" style="width: 95% !important; margin-left: 2.5%;"></span>
+        <div class="header-sheet-subclass-text" >Subclass</div>
 
         <span class="input header-sheet-version-box" style="text-align: center !important;">0.0.0</span>
 
@@ -1793,8 +1793,6 @@
             <input type="number" class="class-menu-field-2  input" name="attr_total_settings" />
             <div class="class-menu-text-3">Description</div>
             <textarea spellcheck="false" rows="10" class="class-menu-field-3 rt-textfield" style="height:90px;margin-top: 10px; resize: none;" name="attr_desc_settings"></textarea>
-
-
         </div>
 
 
@@ -1812,28 +1810,30 @@
 
             <div class="class-list">
                 <fieldset class="class-list repeating_classes">
-                    <button type="action" class="resource-settings-container gear-button" style="font-family:Pictos;"
-                        name="act_class-settings">y</button>
-                    <input type="text" class="class-list-text input" name="attr_class" />
-                    <input type="number" class="class-list-level input" name="attr_level" />
-                    <select name="attr_hit-die" class="class-list-hit-die dropdown" style="display:none;">
-                        <option value="d6" selected>d6</option>
-                        <option value="d8">d8</option>
-                        <option value="d10">d10</option>
-                        <option value="d12">d12</option>
-                    </select>
+                    <div class="compendium-drop-target">
+                        <button type="action" class="resource-settings-container gear-button" style="font-family:Pictos;"
+                            name="act_class-settings">y</button>
+                        <input type="text" class="class-list-text input" name="attr_class" accept=""/>
+                        <input type="number" class="class-list-level input" name="attr_level" />
+                        <select name="attr_hit-die" class="class-list-hit-die dropdown" style="display:none;">
+                            <option value="d6" selected>d6</option>
+                            <option value="d8">d8</option>
+                            <option value="d10">d10</option>
+                            <option value="d12">d12</option>
+                        </select>
+                    </div>
                 </fieldset>
             </div>
 
             <div class="class-resource-header light-label-bar">
             </div>
-            <div class="class-resource-header light-label-bar" style="padding-left: 0%; padding-top: 2px">
+            <div class="class-resource-header light-label-bar" style="padding-left: -20%; padding-top: 2px; text-align: left;">
                 <div class="class-list-text" > Resource</div>
             </div>
             <div class="class-resource-header" style="margin-top: 2px; padding-left: 30%; padding-top: 2px">
                 <div class="class-list-text" > Current</div>
             </div>
-            <div class="class-resource-header"style="margin-top: 2px; padding-left: 47%; padding-top: 2px">
+            <div class="class-resource-header"style="margin-top: 2px; padding-left: 56%; padding-top: 2px">
                 <div class="class-list-text" > Total</div>
             </div>
 
@@ -1873,15 +1873,61 @@
                 
             </div>
             <div class="feats-col-1-header light-label-bar" style="padding-left: 25%; padding-top: 2px">
-                <div class="class-list-text" > Resource</div>
+                <div class="class-list-text" > Class Features</div>
             </div>
 
             <div class="feats-col-2-header light-label-bar">
                 
             </div>
             <div class="feats-col-2-header light-label-bar" style="padding-left: 25%; padding-top: 2px">
-                <div class="class-list-text" > Resource</div>
+                <div class="class-list-text" > Other Features</div>
             </div>
+
+            <div class="feats-col-1-body">
+                <fieldset class="class-list repeating_class-features">
+                    <input type="hidden" class="feature-detail-toggle" name="attr_settings_toggle" value="hide"></input>
+                    <div class="compendium-drop-target class-feature-panel">
+                        <input type="text" class="feature-title input" name="attr_title" />
+                        <button type='action' class='feature-roll basic-button' name='act_roll'>Use</button>
+                        <input type="hidden" class="feature-detail-toggle" name="attr_settings_toggle" value="hide"></input>
+                        <button type='action' class='feature-expand basic-button' name='act_expand'>Expand</button>
+                        <div  class="feature-desc-text" style="padding-left:15px; resize: none;">Desciption</div>
+                        <textarea spellcheck="false" rows="10" class="feature-desc-input input rt-textfield " style="height:50px; resize: none;" name="attr_desc"></textarea>
+                        <button type='action' class='feature-minimize basic-button' name='act_minimize'>Minimize</button>
+                    </div>
+                    <hr style="border-top: 2px solid; border-color: var(--text-color);">
+                </fieldset>
+            </div>
+
+            <div class="feats-col-2-body">
+                <fieldset class="class-list repeating_other-features">
+                    <input type="hidden" class="feature-detail-toggle" name="attr_settings_toggle" value="hide"></input>
+                    <div class="compendium-drop-target feature-panel">
+                        <input type="text" class="feature-title input" name="attr_title" />
+                        <div  class="feature-src-txt">Feature Source</div>
+                        <button type='action' class='feature-roll basic-button' name='act_roll'>Use</button>
+                        <input type="hidden" class="feature-detail-toggle" name="attr_settings_toggle" value="hide"></input>
+                        <button type='action' class='feature-expand basic-button' name='act_expand'>Expand</button>
+                        <select name="attr_source" class="feature-src-input dropdown">
+                            <option value="feat" selected>Feat</option>
+                            <option value="racial">Race</option>
+                            <option value="subclass">Subclass</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <div  class="feature-desc-text" style="padding-left:15px; resize: none;">Desciption</div>
+                        <textarea spellcheck="false" rows="10" class="feature-desc-input input rt-textfield " style="height:50px; resize: none;" name="attr_desc"></textarea>
+                        <button type='action' class='feature-minimize basic-button' name='act_minimize'>Minimize</button>
+                    </div>
+                    <hr style="border-top: 2px solid; border-color: var(--text-color);">
+                </fieldset>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="weapon-page">        
+        <div class="class-lvl-resource-header-block dark-label-bar">
+            Melee Weapons
         </div>
     </div>
 </div>
@@ -2096,7 +2142,30 @@ field => weight
             });
         });
     });
-    
+
+
+//////////////////////////////////////////////
+///////////     Pages Section END  //////////
+////////////////////////////////////////////
+///////////     Stats Section Start    ////
+//////////////////////////////////////////
+
+    on(`clicked:repeating_other-features:expand`, async(info) =>{
+         setAttrs({[`repeating_other-features_settings_toggle`]: "show"});
+         
+    });
+    on(`clicked:repeating_other-features:minimize`, async(info) =>{
+         setAttrs({[`repeating_other-features_settings_toggle`]: "hide"});
+         
+    });
+    on(`clicked:repeating_class-features:expand`, async(info) =>{
+         setAttrs({[`repeating_other-features_settings_toggle`]: "show"});
+         
+    });
+    on(`clicked:repeating_class-features:minimize`, async(info) =>{
+         setAttrs({[`repeating_other-features_settings_toggle`]: "hide"});
+         
+    });
 
 //////////////////////////////////////////////
 ///////////     Pages Section END  //////////
