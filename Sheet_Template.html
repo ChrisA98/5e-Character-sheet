@@ -1,55 +1,59 @@
-<div class= "sheet-container">
-    <div class= "header-bar">
+<input type="hidden" class="main-page-toggle" name="attr_main_page_toggle" value="core"></input>
+<div class="sheet-container">
+    <div class="header-bar">
         <img name="attr_character_avatar" class="header-image"></img>
 
         <div class="header-sheet-version-text">Sheet Version</div>
 
-        <input type="text" class="header-sheet-charname-box input"/>
+        <input type="text" class="header-sheet-charname-box input" name="attr_character_name" />
         <div class="header-sheet-charname-text">Character Name</div>
 
-        <input type="text" class="header-sheet-race-box input"/>
+        <input type="text" class="header-sheet-race-box input" name="attr_race" />
         <div class="header-sheet-race-text">Race</div>
 
-        <input type="text" class="header-sheet-level-box input" disabled/>
+        <span class="header-sheet-level-box input" name="attr_total_level"
+            style="width: 95% !important; margin-left: 2.5%;"></span>
         <div class="header-sheet-level-text">Level</div>
 
-        <input type="text" class="header-sheet-bg-box input" disabled/>
+        <span class="header-sheet-bg-box input" name="attr_background"></span>
         <div class="header-sheet-bg-text">Background</div>
 
-        <input type="text" class=" header-sheet-class-box input" disabled/>
+        <span class=" header-sheet-class-box input" name="attr_classes"></span>
         <div class="header-sheet-class-text">Class</div>
 
-        <input type="text" class=" header-sheet-subclass-box input"/>
+        <span class=" header-sheet-subclass-box input" name="attr_subclass" ></span>
         <div class="header-sheet-subclass-text">Subclass</div>
 
-        <input type="text" class="input header-sheet-version-box" style="text-align: center !important;" value = 0.0.0 disabled = "true"/>
+        <span class="input header-sheet-version-box" style="text-align: center !important;">0.0.0</span>
 
-        <button class="header-sheet-gear" style="font-family:Pictos;">y</button>
+        <button class="header-sheet-gear gear-button" style="font-family:Pictos;">y</button>
     </div>
 
     <div class="page-buttons-area">
         <input type="hidden" class="main-page-toggle" name="attr_main_page_toggle" value="core" />
-        <button type="action" class="basic-button page-buttons-0" name = "act_page_core">Core Stats</button>
-        <button type="action" class="basic-button page-buttons-1" name = "act_page_skills">Skills</button>
-        <button type="action" class="basic-button page-buttons-2" name = "act_page_background">Background</button>
-        <button type="action" class="basic-button page-buttons-3" name = "act_page_class">Class</button>
-        <button type="action" class="basic-button page-buttons-4" name = "act_page_weapons">Weapons</button>
-        <button type="action" class="basic-button page-buttons-5" name = "act_page_spells">Spellbook</button>
-        <button type="action" class="basic-button page-buttons-6" name = "act_page_armor">Armor</button>
-        <button type="action" class="basic-button page-buttons-7" name = "act_page_inventory">Inventory</button>
-        <button type="action" class="basic-button page-buttons-8" name = "act_page_show_all">Show All</button>
+        <button type="action" class="basic-button page-buttons-0" name="act_page_core">Core Stats</button>
+        <button type="action" class="basic-button page-buttons-1" name="act_page_skills">Skills</button>
+        <button type="action" class="basic-button page-buttons-2" name="act_page_background">Background</button>
+        <button type="action" class="basic-button page-buttons-3" name="act_page_class">Class</button>
+        <button type="action" class="basic-button page-buttons-4" name="act_page_weapons">Weapons</button>
+        <button type="action" class="basic-button page-buttons-5" name="act_page_spells">Spellbook</button>
+        <button type="action" class="basic-button page-buttons-6" name="act_page_armor">Armor</button>
+        <button type="action" class="basic-button page-buttons-7" name="act_page_inventory">Inventory</button>
+        <button type="action" class="basic-button page-buttons-8" name="act_page_show_all">Show All</button>
     </div>
-    
+
+    <!-- Manage page Switched Variable -->
     <input type="hidden" class="main-page-toggle" name="attr_main_page_toggle" value="core"></input>
+
     <div class="core-stats-page">
 
-        
+
         <!-- Ability Scores and Saves Section -->
         <div class="core-stats">
             <div class="core-stats-label dark-label-bar">
                 Core Stats
             </div>
-            <div class="core-stats-header-bar light-label-bar">                
+            <div class="core-stats-header-bar light-label-bar">
             </div>
             <div class="core-stats-header-1">
                 Score
@@ -71,61 +75,66 @@
             <div class="core-stats-str-2">
                 STR
             </div>
-            <input type="number" class="core-stats-str-3 input-stats " name="attr_strength_modifier" value="5" readonly/>
-            <input type="checkbox" class="core-stats-str-4 checkbox-small" name="attr_strength_save_prof"/>
-            <input type="number" class="core-stats-str-5 input-stats " name="attr_strength_save_modifier" value="5"readonly/>
-            <button class="core-stats-str-6 roll-button " name="attr_strength_modifier" style="font-family:dicefontd20;" >t</button>
-            <button class="core-stats-str-7 basic-button" style="font-family:Pictos;">y</button>
+            <span class="core-stats-str-3 input-stats " name="attr_strength_modifier" value="5"></span>
+            <input type="checkbox" class="core-stats-str-4 checkbox-small" name="attr_strength_save_prof" />
+            <span class="core-stats-str-5 input-stats " name="attr_strength_save_modifier" value="5"></span>
+            <button class="core-stats-str-6 roll-button " name="attr_strength_modifier"
+                style="font-family:dicefontd20;">t</button>
+            <button class="core-stats-str-7 gear-button" style="font-family:Pictos;">y</button>
 
             <input type="number" class="core-stats-dex-1 input-stats " name="attr_dexterity" value="8" min="0" />
             <div class="core-stats-dex-2">
                 DEX
             </div>
-            <input type="number" class="core-stats-dex-3 input-stats " name="attr_dexterity_modifier" value="5"readonly/>
-            <input type="checkbox" class="core-stats-dex-4 checkbox-small" name="attr_dexterity_save_prof"/>
-            <input type="number" class="core-stats-dex-5 input-stats " name="attr_dexterity_save_modifier" value="5"readonly/>
-            <button class="core-stats-dex-6 roll-button " style="font-family:dicefontd20;" >t</button>
-            <button class="core-stats-dex-7 basic-button" style="font-family:Pictos;">y</button>
-            
+            <span class="core-stats-dex-3 input-stats " name="attr_dexterity_modifier" value="5"></span>
+            <input type="checkbox" class="core-stats-dex-4 checkbox-small" name="attr_dexterity_save_prof" />
+            <span class="core-stats-dex-5 input-stats " name="attr_dexterity_save_modifier" value="5"></span>
+            <button class="core-stats-dex-6 roll-button " style="font-family:dicefontd20;">t</button>
+            <button class="core-stats-dex-7 gear-button" style="font-family:Pictos;">y</button>
+
             <input type="number" class="core-stats-con-1 input-stats " name="attr_constitution" value="8" min="0" />
             <div class="core-stats-con-2">
                 CON
             </div>
-            <input type="number" class="core-stats-con-3 input-stats " name="attr_constitution_modifier" value="5"readonly/>
-            <input type="checkbox" class="core-stats-con-4 checkbox-small" name="attr_constitution_save_prof"/>
-            <input type="number" class="core-stats-con-5 input-stats " name="attr_constitution_save_modifier" value="5"readonly/>
-            <button class="core-stats-con-6 roll-button " name="attr_constitution_modifier" style="font-family:dicefontd20;" >t</button>
-            <button class="core-stats-con-7 basic-button" style="font-family:Pictos;">y</button>
-            
+            <span class="core-stats-con-3 input-stats " name="attr_constitution_modifier" value="5"></span>
+            <input type="checkbox" class="core-stats-con-4 checkbox-small" name="attr_constitution_save_prof" />
+            <span class="core-stats-con-5 input-stats " name="attr_constitution_save_modifier" value="5"></span>
+            <button class="core-stats-con-6 roll-button " name="attr_constitution_modifier"
+                style="font-family:dicefontd20;">t</button>
+            <button class="core-stats-con-7 gear-button" style="font-family:Pictos;">y</button>
+
             <input type="number" class="core-stats-int-1 input-stats " name="attr_intelligence" value="8" min="0" />
             <div class="core-stats-int-2">
                 INT
             </div>
-            <input type="number" class="core-stats-int-3 input-stats " name="attr_intelligence_modifier" value="5"readonly/>
-            <input type="checkbox" class="core-stats-int-4 checkbox-small" name="attr_intelligence_save_prof"/>
-            <input type="number" class="core-stats-int-5 input-stats " name="attr_intelligence_save_modifier" value="5"readonly/>
-            <button class="core-stats-int-6 roll-button " name="attr_intelligence_modifier" style="font-family:dicefontd20;" >t</button>
-            <button class="core-stats-int-7 basic-button" style="font-family:Pictos;">y</button>
+            <span class="core-stats-int-3 input-stats " name="attr_intelligence_modifier" value="5"></span>
+            <input type="checkbox" class="core-stats-int-4 checkbox-small" name="attr_intelligence_save_prof" />
+            <span class="core-stats-int-5 input-stats " name="attr_intelligence_save_modifier" value="5"></span>
+            <button class="core-stats-int-6 roll-button " name="attr_intelligence_modifier"
+                style="font-family:dicefontd20;">t</button>
+            <button class="core-stats-int-7 gear-button" style="font-family:Pictos;">y</button>
 
             <input type="number" class="core-stats-wis-1 input-stats " name="attr_wisdom" value="8" min="0" />
             <div class="core-stats-wis-2">
                 WIS
             </div>
-            <input type="number" class="core-stats-wis-3 input-stats " name="attr_wisdom_modifier" value="5"readonly/>
-            <input type="checkbox" class="core-stats-wis-4 checkbox-small" name="attr_wisdom_save_prof"/>
-            <input type="number" class="core-stats-wis-5 input-stats " name="attr_wisdom_save_modifier" value="5"readonly/>
-            <button class="core-stats-wis-6 roll-button " name="attr_wisdom_modifier" style="font-family:dicefontd20;" >t</button>
-            <button class="core-stats-wis-7 basic-button" style="font-family:Pictos;">y</button>
-            
+            <span class="core-stats-wis-3 input-stats " name="attr_wisdom_modifier" value="5"></span>
+            <input type="checkbox" class="core-stats-wis-4 checkbox-small" name="attr_wisdom_save_prof" />
+            <span class="core-stats-wis-5 input-stats " name="attr_wisdom_save_modifier" value="5"></span>
+            <button class="core-stats-wis-6 roll-button " name="attr_wisdom_modifier"
+                style="font-family:dicefontd20;">t</button>
+            <button class="core-stats-wis-7 gear-button" style="font-family:Pictos;">y</button>
+
             <input type="number" class="core-stats-cha-1 input-stats " name="attr_charisma" value="8" min="0" />
             <div class="core-stats-cha-2">
                 CHA
             </div>
-            <input type="number" class="core-stats-cha-3 input-stats " name="attr_charisma_modifier" value="5"readonly/>
-            <input type="checkbox" class="core-stats-cha-4 checkbox-small" name="attr_charisma_save_prof"/>
-            <input type="number" class="core-stats-cha-5 input-stats " name="attr_charisma_save_modifier" value="5"readonly/>
-            <button class="core-stats-cha-6 roll-button " name="attr_charisma_modifier" style="font-family:dicefontd20;" >t</button>
-            <button class="core-stats-cha-7 basic-button" style="font-family:Pictos;">y</button>
+            <span class="core-stats-cha-3 input-stats " name="attr_charisma_modifier" value="5"></span>
+            <input type="checkbox" class="core-stats-cha-4 checkbox-small" name="attr_charisma_save_prof" />
+            <span class="core-stats-cha-5 input-stats " name="attr_charisma_save_modifier" value="5"></span>
+            <button class="core-stats-cha-6 roll-button " name="attr_charisma_modifier"
+                style="font-family:dicefontd20;">t</button>
+            <button class="core-stats-cha-7 gear-button" style="font-family:Pictos;">y</button>
 
 
         </div>
@@ -162,40 +171,42 @@
             <div class="init-label dark-label-bar">
                 Initiative
             </div>
-            <input type="number" class="initiative-bonus-box input-stats " name="attr_initiative_bonus" value="0" min="0" />
+            <input type="number" class="initiative-bonus-box input-stats " name="attr_initiative_bonus" value="0"
+                min="0" />
             <div class="initiative-bonus-text">
                 Bonus
             </div>
-            <input type="number" class="initiative-total-box input-stats " name="attr_initiative_total" value="0" min="0" disabled/>
+            <span class="initiative-total-box input-stats " name="attr_initiative_total" value="0" min="0"></span>
             <div class="initiative-total-text">
                 Total
             </div>
-            <button class="initiative-roll roll-button " name="attr_strength_modifier" style="font-family:dicefontd20;" >t</button>
+            <button class="initiative-roll roll-button " name="attr_strength_modifier"
+                style="font-family:dicefontd20;">t</button>
 
-            
+
             <div class="ac-label dark-label-bar">
                 Armour Class
             </div>
-            <input type="number" class="ac-modified-box input-stats " name="attr_modified_ac" value="0" min="0" disabled/>
+            <span class="ac-modified-box input-stats " name="attr_modified_ac" value="0" min="0"></span>
             <div class="ac-modified-text">
                 Armored
             </div>
-            <input type="number" class="ac-natural-box input-stats " name="attr_natural_ac" value="0" min="0" disabled/>
+            <span class="ac-natural-box input-stats " name="attr_natural_ac" value="0" min="0"></span>
             <div class="ac-natural-text">
                 Unarmored
             </div>
         </div>
 
         <!-- Level and experience Section -->
-        <div class="lvl-exp">            
+        <div class="lvl-exp">
             <div class="lvl-label dark-label-bar">
                 Level and Experience
             </div>
-            <input type="number" class="cs-level-box input-stats " name="attr_total_level" value="0" min="0" />
+            <span class="cs-level-box input-stats " name="attr_total_level" value="0" min="0"></span>
             <div class="cs-level-text">
                 Character Level
             </div>
-            <input type="number" class="cs-prof-box input-stats " name="attr_proficiency_bonus" value="0" min="0" />
+            <span class="cs-prof-box input-stats " name="attr_proficiency_bonus" value="0" min="0"></span>
             <div class="cs-prof-text">
                 Proficiency Bonus
             </div>
@@ -205,25 +216,27 @@
                 Current EXP
             </div>
 
-            <input type="number" class="cs-exp-next-level-box input-stats " name="attr_exp_next_level" value="0" min="0" />
+            <span class="cs-exp-next-level-box input-stats " name="attr_exp_next_level" value="0" min="0"></span>
             <div class="cs-exp-next-level-text">
                 EXP for next level
             </div>
         </div>
 
         <!-- Temporary Bonuses Section -->
-        <div class="bonuses">               
+        <div class="bonuses">
             <div class="bonuses-label dark-label-bar">
                 Bonuses/Penalties
             </div>
             <div class="bonuses-melee-header-bar light-label-bar">
                 Melee
             </div>
-            <input type="number" class="bonuses-melee-atk-box input-stats " name="attr_melee_attack_roll_bonus" value="0" min="0" />
+            <input type="number" class="bonuses-melee-atk-box input-stats " name="attr_melee_attack_roll_bonus"
+                value="0" min="0" />
             <div class="bonuses-melee-atk-text">
                 Attack
             </div>
-            <input type="number" class="bonuses-melee-dmg-box input-stats " name="attr_melee_damage_roll_bonus" value="0" min="0" />
+            <input type="number" class="bonuses-melee-dmg-box input-stats " name="attr_melee_damage_roll_bonus"
+                value="0" min="0" />
             <div class="bonuses-melee-dmg-text">
                 Damage
             </div>
@@ -231,11 +244,13 @@
             <div class="bonuses-ranged-header-bar light-label-bar">
                 Ranged
             </div>
-            <input type="number" class="bonuses-ranged-atk-box input-stats " name="attr_ranged_attack_roll_bonus" value="0" min="0" />
+            <input type="number" class="bonuses-ranged-atk-box input-stats " name="attr_ranged_attack_roll_bonus"
+                value="0" min="0" />
             <div class="bonuses-ranged-atk-text">
                 Attack
             </div>
-            <input type="number" class="bonuses-ranged-dmg-box input-stats " name="attr_ranged_damage_roll_bonus" value="0" min="0" />
+            <input type="number" class="bonuses-ranged-dmg-box input-stats " name="attr_ranged_damage_roll_bonus"
+                value="0" min="0" />
             <div class="bonuses-ranged-dmg-text">
                 Damage
             </div>
@@ -243,15 +258,18 @@
             <div class="bonuses-spellcasting-header-bar light-label-bar">
                 Spellcasting
             </div>
-            <input type="number" class="bonuses-spellcasting-atk-box input-stats " name="attr_spell_attack_bonus" value="0" min="0" />
+            <input type="number" class="bonuses-spellcasting-atk-box input-stats " name="attr_spell_attack_bonus"
+                value="0" min="0" />
             <div class="bonuses-spellcasting-atk-text">
                 Attack
             </div>
-            <input type="number" class="bonuses-spellcasting-dmg-box input-stats " name="attr_spell_damage_bonus" value="0" min="0" />
+            <input type="number" class="bonuses-spellcasting-dmg-box input-stats " name="attr_spell_damage_bonus"
+                value="0" min="0" />
             <div class="bonuses-spellcasting-dmg-text">
                 Damage
             </div>
-            <input type="number" class="bonuses-spellcasting-save-box input-stats " name="attr_spell_save_bonus" value="0" min="0" />
+            <input type="number" class="bonuses-spellcasting-save-box input-stats " name="attr_spell_save_bonus"
+                value="0" min="0" />
             <div class="bonuses-spellcasting-save-text">
                 Save
             </div>
@@ -259,18 +277,20 @@
             <div class="bonuses-skills-header-bar light-label-bar">
                 Saves and Skill Checks
             </div>
-            <input type="number" class="bonuses-skills-saves-box input-stats " name="attr_saving_throw_bonus" value="0" min="0" />
+            <input type="number" class="bonuses-skills-saves-box input-stats " name="attr_saving_throw_bonus" value="0"
+                min="0" />
             <div class="bonuses-skills-saves-text">
                 Saving Throws
             </div>
-            <input type="number" class="bonuses-skills-checks-box input-stats " name="attr_skill_check_bonus" value="0" min="0" />
+            <input type="number" class="bonuses-skills-checks-box input-stats " name="attr_skill_check_bonus" value="0"
+                min="0" />
             <div class="bonuses-skills-checks-text">
                 Skill Checks
             </div>
         </div>
 
         <!-- Hit Dice and Resting Section -->
-        <div class="hit-dice">        
+        <div class="hit-dice">
             <div class="hd-label dark-label-bar">
                 Resting & Hit Dice
             </div>
@@ -288,9 +308,9 @@
             <div class="hd-header-bar-text-4 ">
                 Max
             </div>
-            
-            <button class="hd-long-button basic-button">Long Rest</button>
-            <button class="hd-short-button basic-button">Short Rest</button>
+
+            <button type="action" class="hd-long-button basic-button" name="act_long_rest">Long Rest</button>
+            <button type="action" class="hd-short-button basic-button" name="act_short_rest">Short Rest</button>
 
             <div class="hd-d6-text">
                 d6
@@ -305,27 +325,27 @@
                 d12
             </div>
 
-            <input type="number" class="hd-d6-box input-stats" name="attr_d6_hitdice" value="0" min="0" />
-            <input type="number" class="hd-d8-box input-stats" name="attr_d8_hitdice" value="0" min="0" />
-            <input type="number" class="hd-d10-box input-stats" name="attr_d10_hitdice" value="0" min="0" />
-            <input type="number" class="hd-d12-box input-stats" name="attr_d12_hitdice" value="0" min="0" />
+            <input type="number" class="hd-d6-box input-stats" name="attr_d6_current_hitdice" value="0" min="0" />
+            <input type="number" class="hd-d8-box input-stats" name="attr_d8_current_hitdice" value="0" min="0" />
+            <input type="number" class="hd-d10-box input-stats" name="attr_d10_current_hitdice" value="0" min="0" />
+            <input type="number" class="hd-d12-box input-stats" name="attr_d12_current_hitdice" value="0" min="0" />
 
-            <input type="number" class="hd-d6-max input-stats" name="attr_d6_hitdice" value="0" min="0" disabled/>
-            <input type="number" class="hd-d8-max input-stats" name="attr_d8_hitdice" value="0" min="0" disabled/>
-            <input type="number" class="hd-d10-max input-stats" name="attr_d10_hitdice" value="0" min="0" disabled/>
-            <input type="number" class="hd-d12-max input-stats" name="attr_d12_hitdice" value="0" min="0" disabled/>
+            <span class="hd-d6-max input-stats" name="attr_d6_hitdice" value="0" min="0"></span>
+            <span class="hd-d8-max input-stats" name="attr_d8_hitdice" value="0" min="0"></span>
+            <span class="hd-d10-max input-stats" name="attr_d10_hitdice" value="0" min="0"></span>
+            <span class="hd-d12-max input-stats" name="attr_d12_hitdice" value="0" min="0"></span>
 
             <button class="hd-d6-roll roll-button">t</button>
             <button class="hd-d8-roll roll-button">t</button>
             <button class="hd-d10-roll roll-button">t</button>
             <button class="hd-d12-roll roll-button">t</button>
-            
-            
+
+
         </div>
 
         <!-- Other Section -->
         <div class="other-mp">
-                       
+
             <div class="other-label dark-label-bar">
                 Other
             </div>
@@ -333,7 +353,7 @@
             <div class="inspo-header-bar light-label-bar">
                 Inspiration
             </div>
-            <input type="checkbox" class="inspo-checkbox checkbox-small" name="attr_inspiration"/>
+            <input type="checkbox" class="inspo-checkbox checkbox-small" name="attr_inspiration" />
 
 
             <div class="deathsave-header-bar light-label-bar">
@@ -343,95 +363,2264 @@
             <div class="deathsave-success-text">
                 Success
             </div>
-            <input type="checkbox" class="deathsave-success-check-1 checkbox-small" name="attr_ds_success_1"/>
-            <input type="checkbox" class="deathsave-success-check-2 checkbox-small" name="attr_ds_success_2"/>
-            <input type="checkbox" class="deathsave-success-check-3 checkbox-small" name="attr_ds_success_3"/>
+            <input type="checkbox" class="deathsave-success-check-1 checkbox-small" name="attr_ds_success_1" />
+            <input type="checkbox" class="deathsave-success-check-2 checkbox-small" name="attr_ds_success_2" />
+            <input type="checkbox" class="deathsave-success-check-3 checkbox-small" name="attr_ds_success_3" />
 
             <div class="deathsave-fail-text">
                 Failure
             </div>
-            <input type="checkbox" class="deathsave-fail-check-1 checkbox-small" name="attr_ds_fail_1"/>
-            <input type="checkbox" class="deathsave-fail-check-2 checkbox-small" name="attr_ds_fail_2"/>
-            <input type="checkbox" class="deathsave-fail-check-3 checkbox-small" name="attr_ds_fail_3"/>
+            <input type="checkbox" class="deathsave-fail-check-1 checkbox-small" name="attr_ds_fail_1" />
+            <input type="checkbox" class="deathsave-fail-check-2 checkbox-small" name="attr_ds_fail_2" />
+            <input type="checkbox" class="deathsave-fail-check-3 checkbox-small" name="attr_ds_fail_3" />
 
 
             <button class="deathsave-roll basic-button">Death Save</button>
-            <button class="deathsave-settings roll-button" style="font-family:Pictos;">y</button>
+            <button class="deathsave-settings gear-button" style="font-family:Pictos;">y</button>
 
+        </div>
+    </div>
+
+    <div class="skills-page">
+        <div class="skills-header-block dark-label-bar">
+            Skills
+        </div>
+
+        <div class="skill-list-left-container">
+            <div class="skills-label-block light-label-bar">
+            </div>
+            <div class="skills-label-1-text ">
+                Skill
+            </div>
+            <div class="skills-label-3-text ">
+                Prof?
+            </div>
+            <div class="skills-label-4-text ">
+                Bonus
+            </div>
+            <div class="skills-label-5-text ">
+                Total
+            </div>
+            <div class="skills-label-6-text ">
+                Pass
+            </div>
+
+            <!-- Acrobatics Skill Start -->
+            <button type='action' class='skill-acrobatics-setting-button gear-button' style='font-family:Pictos;'
+                name='act_acrobatics_settings'>y</button>
+            <button type='action' class='skill-acrobatics-roll-button roll-button' name='act_acrobatics_roll'>t</button>
+            <div class="skill-acrobatics-text ">
+                Acrobatics
+            </div>
+            <select class="skill-acrobatics-ability dropdown" name="attr_acrobatics_ability" hidden>
+                <option value="nan" disabled>Ability</option>
+                <option value="strength">STR</option>
+                <option value="dexterity" selected>DEX</option>
+                <option value="constitution">CON</option>
+                <option value="intelligence">INT</option>
+                <option value="wisdom">WIS</option>
+                <option value="charisma">CHA</option>
+            </select>
+
+            <select class="skill-acrobatics-prof dropdown" name="attr_acrobatics_proficiency">
+                <option value="nan" disabled>Proficiency</option>
+                <option value="no" selected>No</option>
+                <option value="jack">Jack of All Trades</option>
+                <option value="proficient">Proficient</option>
+                <option value="expert">Expertise</option>
+
+                <input type="number" class="skill-acrobatics-bonus input-skills-page" value="0"
+                    name="attr_acrobatics_bonus" />
+                <span class="skill-acrobatics-total input-skills-page" value="0" name="attr_acrobatics_total"></span>
+                <span class="skill-acrobatics-passive input-skills-page"
+                    style="background-color: var(--disabled-input-color-2);" value="0"
+                    name="attr_acrobatics_passive"></span>
+            </select>
+            <!-- Acrobatics Skill End -->
+
+            <!-- animal-handling Start -->
+            <button type='action' class='skill-animalhandling-setting-button gear-button' style='font-family:Pictos;'
+                name='act_animalhandling_settings'>y</button>
+            <button type='action' class='skill-animalhandling-roll-button roll-button'
+                name='act_animalhandling_roll'>t</button>
+            <div class="skill-animal-handling-text ">
+                Animal Handling
+            </div>
+            <select class="skill-animal-handling-ability dropdown" name="attr_animalhandling_ability" hidden>
+                <option value="nan" disabled>Ability</option>
+                <option value="strength">STR</option>
+                <option value="dexterity">DEX</option>
+                <option value="constitution">CON</option>
+                <option value="intelligence">INT</option>
+                <option value="wisdom" selected>WIS</option>
+                <option value="charisma">CHA</option>
+            </select>
+
+            <select class="skill-animal-handling-prof dropdown" name="attr_animalhandling_proficiency">
+                <option value="nan" disabled>Proficiency</option>
+                <option value="no" selected>No</option>
+                <option value="jack">Jack of All Trades</option>
+                <option value="proficient">Proficient</option>
+                <option value="expert">Expertise</option>
+
+                <input type="number" class="skill-animal-handling-bonus input-skills-page" value="0"
+                    name="attr_animalhandling_bonus" />
+                <span class="skill-animal-handling-total input-skills-page" value="0"
+                    name="attr_animalhandling_total"></span>
+                <span class="skill-animal-handling-passive input-skills-page"
+                    style="background-color: var(--disabled-input-color-2);"
+                    style="background-color: var(--disabled-input-color-2);" value="0"
+                    name="attr_animalhandling_passive"></span>
+            </select>
+            <!-- animal-handling Skill End -->
+
+            <!-- arcana Start -->
+            <button type='action' class='skill-arcana-setting-button gear-button' style='font-family:Pictos;'
+                name='act_arcana_settings'>y</button>
+            <button type='action' class='skill-arcana-roll-button roll-button' name='act_arcana_roll'>t</button>
+            <div class="skill-arcana-text ">
+                Arcana
+            </div>
+            <select class="skill-arcana-ability dropdown" name="attr_arcana_ability" hidden>
+                <option value="nan" disabled>Ability</option>
+                <option value="strength">STR</option>
+                <option value="dexterity">DEX</option>
+                <option value="constitution">CON</option>
+                <option value="intelligence" selected>INT</option>
+                <option value="wisdom">WIS</option>
+                <option value="charisma">CHA</option>
+            </select>
+
+            <select class="skill-arcana-prof dropdown" name="attr_arcana_proficiency">
+                <option value="nan" disabled>Proficiency</option>
+                <option value="no" selected>No</option>
+                <option value="jack">Jack of All Trades</option>
+                <option value="proficient">Proficient</option>
+                <option value="expert">Expertise</option>
+
+                <input type="number" class="skill-arcana-bonus input-skills-page" value="0" name="attr_arcana_bonus" />
+                <span class="skill-arcana-total input-skills-page" value="0" name="attr_arcana_total"></span>
+                <span class="skill-arcana-passive input-skills-page"
+                    style="background-color: var(--disabled-input-color-2);" value="0"
+                    name="attr_arcana_passive"></span>
+            </select>
+            <!-- arcana Skill End -->
+
+            <!-- athletics Start -->
+            <button type='action' class='skill-athletics-setting-button gear-button' style='font-family:Pictos;'
+                name='act_athletics_settings'>y</button>
+            <button type='action' class='skill-athletics-roll-button roll-button' name='act_athletics_roll'>t</button>
+            <div class="skill-athletics-text ">
+                Athletics
+            </div>
+            <select class="skill-athletics-ability dropdown" name="attr_athletics_ability" hidden>
+                <option value="nan" disabled>Ability</option>
+                <option value="strength" selected>STR</option>
+                <option value="dexterity">DEX</option>
+                <option value="constitution">CON</option>
+                <option value="intelligence">INT</option>
+                <option value="wisdom">WIS</option>
+                <option value="charisma">CHA</option>
+            </select>
+
+            <select class="skill-athletics-prof dropdown" name="attr_athletics_proficiency">
+                <option value="nan" disabled>Proficiency</option>
+                <option value="no" selected>No</option>
+                <option value="jack">Jack of All Trades</option>
+                <option value="proficient">Proficient</option>
+                <option value="expert">Expertise</option>
+
+                <input type="number" class="skill-athletics-bonus input-skills-page" value="0"
+                    name="attr_athletics_bonus" />
+                <span class="skill-athletics-total input-skills-page" value="0" name="attr_athletics_total"></span>
+                <span class="skill-athletics-passive input-skills-page"
+                    style="background-color: var(--disabled-input-color-2);" value="0"
+                    name="attr_athletics_passive"></span>
+            </select>
+            <!-- athletics Skill End -->
+
+            <!-- deception Start -->
+            <button type='action' class='skill-deception-setting-button gear-button' style='font-family:Pictos;'
+                name='act_deception_settings'>y</button>
+            <button type='action' class='skill-deception-roll-button roll-button' name='act_deception_roll'>t</button>
+            <div class="skill-deception-text ">
+                Deception
+            </div>
+            <select class="skill-deception-ability dropdown" name="attr_deception_ability" hidden>
+                <option value="nan" disabled>Ability</option>
+                <option value="strength">STR</option>
+                <option value="dexterity">DEX</option>
+                <option value="constitution">CON</option>
+                <option value="intelligence">INT</option>
+                <option value="wisdom">WIS</option>
+                <option value="charisma" selected>CHA</option>
+            </select>
+
+            <select class="skill-deception-prof dropdown" name="attr_deception_proficiency">
+                <option value="nan" disabled>Proficiency</option>
+                <option value="no" selected>No</option>
+                <option value="jack">Jack of All Trades</option>
+                <option value="proficient">Proficient</option>
+                <option value="expert">Expertise</option>
+
+                <input type="number" class="skill-deception-bonus input-skills-page" value="0"
+                    name="attr_deception_bonus" />
+                <span class="skill-deception-total input-skills-page" value="0" name="attr_deception_total"></span>
+                <span class="skill-deception-passive input-skills-page"
+                    style="background-color: var(--disabled-input-color-2);" value="0"
+                    name="attr_deception_passive"></span>
+            </select>
+            <!-- deception Skill End -->
+
+            <!-- history Start -->
+            <button type='action' class='skill-history-setting-button gear-button' style='font-family:Pictos;'
+                name='act_history_settings'>y</button>
+            <button type='action' class='skill-history-roll-button roll-button' name='act_history_roll'>t</button>
+            <div class="skill-history-text ">
+                History
+            </div>
+            <select class="skill-history-ability dropdown" name="attr_history_ability" hidden>
+                <option value="nan" disabled>Ability</option>
+                <option value="strength">STR</option>
+                <option value="dexterity">DEX</option>
+                <option value="constitution">CON</option>
+                <option value="intelligence" selected>INT</option>
+                <option value="wisdom">WIS</option>
+                <option value="charisma">CHA</option>
+            </select>
+
+            <select class="skill-history-prof dropdown" name="attr_history_proficiency">
+                <option value="nan" disabled>Proficiency</option>
+                <option value="no" selected>No</option>
+                <option value="jack">Jack of All Trades</option>
+                <option value="proficient">Proficient</option>
+                <option value="expert">Expertise</option>
+
+                <input type="number" class="skill-history-bonus input-skills-page" value="0"
+                    name="attr_history_bonus" />
+                <span class="skill-history-total input-skills-page" value="0" name="attr_history_total"></span>
+                <span class="skill-history-passive input-skills-page"
+                    style="background-color: var(--disabled-input-color-2);" value="0"
+                    name="attr_history_passive"></span>
+            </select>
+            <!-- history Skill End -->
+
+            <!-- insight Start -->
+            <button type='action' class='skill-insight-setting-button gear-button' style='font-family:Pictos;'
+                name='act_insight_settings'>y</button>
+            <button type='action' class='skill-insight-roll-button roll-button' name='act_insight_roll'>t</button>
+            <div class="skill-insight-text ">
+                Insight
+            </div>
+            <select class="skill-insight-ability dropdown" name="attr_insight_ability" hidden>
+                <option value="nan" disabled>Ability</option>
+                <option value="strength">STR</option>
+                <option value="dexterity">DEX</option>
+                <option value="constitution">CON</option>
+                <option value="intelligence">INT</option>
+                <option value="wisdom" selected>WIS</option>
+                <option value="charisma">CHA</option>
+            </select>
+
+            <select class="skill-insight-prof dropdown" name="attr_insight_proficiency">
+                <option value="nan" disabled>Proficiency</option>
+                <option value="no" selected>No</option>
+                <option value="jack">Jack of All Trades</option>
+                <option value="proficient">Proficient</option>
+                <option value="expert">Expertise</option>
+
+                <input type="number" class="skill-insight-bonus input-skills-page" value="0"
+                    name="attr_insight_bonus" />
+                <span class="skill-insight-total input-skills-page" value="0" name="attr_insight_total"></span>
+                <span class="skill-insight-passive input-skills-page"
+                    style="background-color: var(--disabled-input-color-2);" value="0"
+                    name="attr_insight_passive"></span>
+            </select>
+            <!-- insight Skill End -->
+
+            <!-- intimidation Start -->
+            <button type='action' class='skill-intimidation-setting-button gear-button' style='font-family:Pictos;'
+                name='act_intimidation_settings'>y</button>
+            <button type='action' class='skill-intimidation-roll-button roll-button'
+                name='act_intimidation_roll'>t</button>
+            <div class="skill-intimidation-text ">
+                Intimidation
+            </div>
+            <select class="skill-intimidation-ability dropdown" name="attr_intimidation_ability" hidden>
+                <option value="nan" disabled>Ability</option>
+                <option value="strength">STR</option>
+                <option value="dexterity">DEX</option>
+                <option value="constitution">CON</option>
+                <option value="intelligence">INT</option>
+                <option value="wisdom">WIS</option>
+                <option value="charisma" selected>CHA</option>
+            </select>
+
+            <select class="skill-intimidation-prof dropdown" name="attr_intimidation_proficiency">
+                <option value="nan" disabled>Proficiency</option>
+                <option value="no" selected>No</option>
+                <option value="jack">Jack of All Trades</option>
+                <option value="proficient">Proficient</option>
+                <option value="expert">Expertise</option>
+
+                <input type="number" class="skill-intimidation-bonus input-skills-page" value="0"
+                    name="attr_intimidation_bonus" />
+                <span class="skill-intimidation-total input-skills-page" value="0"
+                    name="attr_intimidation_total"></span>
+                <span class="skill-intimidation-passive input-skills-page"
+                    style="background-color: var(--disabled-input-color-2);" value="0"
+                    name="attr_intimidation_passive"></span>
+            </select>
+            <!-- intimidation Skill End -->
+
+            <!-- investigation Start -->
+            <button type='action' class='skill-investigation-setting-button gear-button' style='font-family:Pictos;'
+                name='act_investigation_settings'>y</button>
+            <button type='action' class='skill-investigation-roll-button roll-button'
+                name='act_investigation_roll'>t</button>
+            <div class="skill-investigation-text ">
+                Investigation
+            </div>
+            <select class="skill-investigation-ability dropdown" name="attr_investigation_ability" hidden>
+                <option value="nan" disabled>Ability</option>
+                <option value="strength">STR</option>
+                <option value="dexterity">DEX</option>
+                <option value="constitution">CON</option>
+                <option value="intelligence" selected>INT</option>
+                <option value="wisdom">WIS</option>
+                <option value="charisma">CHA</option>
+            </select>
+
+            <select class="skill-investigation-prof dropdown" name="attr_investigation_proficiency">
+                <option value="nan" disabled>Proficiency</option>
+                <option value="no" selected>No</option>
+                <option value="jack">Jack of All Trades</option>
+                <option value="proficient">Proficient</option>
+                <option value="expert">Expertise</option>
+
+                <input type="number" class="skill-investigation-bonus input-skills-page" value="0"
+                    name="attr_investigation_bonus" />
+                <span class="skill-investigation-total input-skills-page" value="0"
+                    name="attr_investigation_total"></span>
+                <span class="skill-investigation-passive input-skills-page"
+                    style="background-color: var(--disabled-input-color-2);" value="0"
+                    name="attr_investigation_passive"></span>
+            </select>
+            <!-- investigation Skill End -->
+        </div>
+
+        <div class="skill-list-right-container">
+
+            <div class="skills-label-block light-label-bar">
+            </div>
+            <div class="skills-label-1-text ">
+                Skill
+            </div>
+            <div class="skills-label-3-text ">
+                Prof?
+            </div>
+            <div class="skills-label-4-text ">
+                Bonus
+            </div>
+            <div class="skills-label-5-text ">
+                Total
+            </div>
+            <div class="skills-label-6-text ">
+                Pass
+            </div>
+
+            <!-- medicine Start -->
+            <button type='action' class='skill-medicine-setting-button gear-button' style='font-family:Pictos;'
+                name='act_medicine_settings'>y</button>
+            <button type='action' class='skill-medicine-roll-button roll-button' name='act_medicine_roll'>t</button>
+            <div class="skill-medicine-text ">
+                Medicine
+            </div>
+            <select class="skill-medicine-ability dropdown" name="attr_medicine_ability" hidden>
+                <option value="nan" disabled>Ability</option>
+                <option value="strength">STR</option>
+                <option value="dexterity">DEX</option>
+                <option value="constitution">CON</option>
+                <option value="intelligence">INT</option>
+                <option value="wisdom" selected>WIS</option>
+                <option value="charisma">CHA</option>
+            </select>
+
+            <select class="skill-medicine-prof dropdown" name="attr_medicine_proficiency">
+                <option value="nan" disabled>Proficiency</option>
+                <option value="no" selected>No</option>
+                <option value="jack">Jack of All Trades</option>
+                <option value="proficient">Proficient</option>
+                <option value="expert">Expertise</option>
+
+                <input type="number" class="skill-medicine-bonus input-skills-page" value="0"
+                    name="attr_medicine_bonus" />
+                <span class="skill-medicine-total input-skills-page" value="0" name="attr_medicine_total"></span>
+                <span class="skill-medicine-passive input-skills-page"
+                    style="background-color: var(--disabled-input-color-2);" value="0"
+                    name="attr_medicine_passive"></span>
+            </select>
+            <!-- medicine Skill End -->
+
+            <!-- nature Start -->
+            <button type='action' class='skill-nature-setting-button gear-button' style='font-family:Pictos;'
+                name='act_nature_settings'>y</button>
+            <button type='action' class='skill-nature-roll-button roll-button' name='act_nature_roll'>t</button>
+            <div class="skill-nature-text ">
+                Nature
+            </div>
+            <select class="skill-nature-ability dropdown" name="attr_nature_ability" hidden>
+                <option value="nan" disabled>Ability</option>
+                <option value="strength">STR</option>
+                <option value="dexterity">DEX</option>
+                <option value="constitution">CON</option>
+                <option value="intelligence" selected>INT</option>
+                <option value="wisdom">WIS</option>
+                <option value="charisma">CHA</option>
+            </select>
+
+            <select class="skill-nature-prof dropdown" name="attr_nature_proficiency">
+                <option value="nan" disabled>Proficiency</option>
+                <option value="no" selected>No</option>
+                <option value="jack">Jack of All Trades</option>
+                <option value="proficient">Proficient</option>
+                <option value="expert">Expertise</option>
+
+                <input type="number" class="skill-nature-bonus input-skills-page" value="0" name="attr_nature_bonus" />
+                <span class="skill-nature-total input-skills-page" value="0" name="attr_nature_total"></span>
+                <span class="skill-nature-passive input-skills-page"
+                    style="background-color: var(--disabled-input-color-2);" value="0"
+                    name="attr_nature_passive"></span>
+            </select>
+            <!-- nature Skill End -->
+
+            <!-- perception Start -->
+            <button type='action' class='skill-perception-setting-button gear-button' style='font-family:Pictos;'
+                name='act_perception_settings'>y</button>
+            <button type='action' class='skill-perception-roll-button roll-button' name='act_perception_roll'>t</button>
+            <div class="skill-perception-text ">
+                Perception
+            </div>
+            <select class="skill-perception-ability dropdown" name="attr_perception_ability" hidden>
+                <option value="nan" disabled>Ability</option>
+                <option value="strength">STR</option>
+                <option value="dexterity">DEX</option>
+                <option value="constitution">CON</option>
+                <option value="intelligence">INT</option>
+                <option value="wisdom" selected>WIS</option>
+                <option value="charisma">CHA</option>
+            </select>
+
+            <select class="skill-perception-prof dropdown" name="attr_perception_proficiency">
+                <option value="nan" disabled>Proficiency</option>
+                <option value="no" selected>No</option>
+                <option value="jack">Jack of All Trades</option>
+                <option value="proficient">Proficient</option>
+                <option value="expert">Expertise</option>
+
+                <input type="number" class="skill-perception-bonus input-skills-page" value="0"
+                    name="attr_perception_bonus" />
+                <span class="skill-perception-total input-skills-page" value="0" name="attr_perception_total"></span>
+                <span class="skill-perception-passive input-skills-page"
+                    style="background-color: var(--disabled-input-color-2);" value="0"
+                    name="attr_perception_passive"></span>
+            </select>
+            <!-- perception Skill End -->
+
+            <!-- performance Start -->
+            <button type='action' class='skill-performance-setting-button gear-button' style='font-family:Pictos;'
+                name='act_performance_settings'>y</button>
+            <button type='action' class='skill-performance-roll-button roll-button'
+                name='act_performance_roll'>t</button>
+            <div class="skill-performance-text ">
+                Performance
+            </div>
+            <select class="skill-performance-ability dropdown" name="attr_performance_ability" hidden>
+                <option value="nan" disabled>Ability</option>
+                <option value="strength">STR</option>
+                <option value="dexterity">DEX</option>
+                <option value="constitution">CON</option>
+                <option value="intelligence">INT</option>
+                <option value="wisdom">WIS</option>
+                <option value="charisma" selected>CHA</option>
+            </select>
+
+            <select class="skill-performance-prof dropdown" name="attr_performance_proficiency">
+                <option value="nan" disabled>Proficiency</option>
+                <option value="no" selected>No</option>
+                <option value="jack">Jack of All Trades</option>
+                <option value="proficient">Proficient</option>
+                <option value="expert">Expertise</option>
+
+                <input type="number" class="skill-performance-bonus input-skills-page" value="0"
+                    name="attr_performance_bonus" />
+                <span class="skill-performance-total input-skills-page" value="0" name="attr_performance_total"></span>
+                <span class="skill-performance-passive input-skills-page"
+                    style="background-color: var(--disabled-input-color-2);" value="0"
+                    name="attr_performance_passive"></span>
+            </select>
+            <!-- performance Skill End -->
+
+            <!-- persuasion Start -->
+            <button type='action' class='skill-persuasion-setting-button gear-button' style='font-family:Pictos;'
+                name='act_persuasion_settings'>y</button>
+            <button type='action' class='skill-persuasion-roll-button roll-button' name='act_persuasion_roll'>t</button>
+            <div class="skill-persuasion-text ">
+                Persuasion
+            </div>
+            <select class="skill-persuasion-ability dropdown" name="attr_persuasion_ability" hidden>
+                <option value="nan" disabled>Ability</option>
+                <option value="strength">STR</option>
+                <option value="dexterity">DEX</option>
+                <option value="constitution">CON</option>
+                <option value="intelligence">INT</option>
+                <option value="wisdom">WIS</option>
+                <option value="charisma" selected>CHA</option>
+            </select>
+
+            <select class="skill-persuasion-prof dropdown" name="attr_persuasion_proficiency">
+                <option value="nan" disabled>Proficiency</option>
+                <option value="no" selected>No</option>
+                <option value="jack">Jack of All Trades</option>
+                <option value="proficient">Proficient</option>
+                <option value="expert">Expertise</option>
+
+                <input type="number" class="skill-persuasion-bonus input-skills-page" value="0"
+                    name="attr_persuasion_bonus" />
+                <span class="skill-persuasion-total input-skills-page" value="0" name="attr_persuasion_total"></span>
+                <span class="skill-persuasion-passive input-skills-page"
+                    style="background-color: var(--disabled-input-color-2);" value="0"
+                    name="attr_persuasion_passive"></span>
+            </select>
+            <!-- persuasion Skill End -->
+
+            <!-- religion Start -->
+            <button type='action' class='skill-religion-setting-button gear-button' style='font-family:Pictos;'
+                name='act_religion_settings'>y</button>
+            <button type='action' class='skill-religion-roll-button roll-button' name='act_religion_roll'>t</button>
+            <div class="skill-religion-text ">
+                Religion
+            </div>
+            <select class="skill-religion-ability dropdown" name="attr_religion_ability" hidden>
+                <option value="nan" disabled>Ability</option>
+                <option value="strength">STR</option>
+                <option value="dexterity">DEX</option>
+                <option value="constitution">CON</option>
+                <option value="intelligence" selected>INT</option>
+                <option value="wisdom">WIS</option>
+                <option value="charisma">CHA</option>
+            </select>
+
+            <select class="skill-religion-prof dropdown" name="attr_religion_proficiency">
+                <option value="nan" disabled>Proficiency</option>
+                <option value="no" selected>No</option>
+                <option value="jack">Jack of All Trades</option>
+                <option value="proficient">Proficient</option>
+                <option value="expert">Expertise</option>
+
+                <input type="number" class="skill-religion-bonus input-skills-page" value="0"
+                    name="attr_religion_bonus" />
+                <span class="skill-religion-total input-skills-page" value="0" name="attr_religion_total"></span>
+                <span class="skill-religion-passive input-skills-page"
+                    style="background-color: var(--disabled-input-color-2);" value="0"
+                    name="attr_religion_passive"></span>
+            </select>
+            <!-- religion Skill End -->
+
+            <!-- sleightofhand Start -->
+            <button type='action' class='skill-sleightofhand-setting-button gear-button' style='font-family:Pictos;'
+                name='act_sleightofhand_settings'>y</button>
+            <button type='action' class='skill-sleightofhand-roll-button roll-button'
+                name='act_sleightofhand_roll'>t</button>
+            <div class="skill-sleightofhand-text ">
+                Sleight of Hand
+            </div>
+            <select class="skill-sleightofhand-ability dropdown" name="attr_sleightofhand_ability" hidden>
+                <option value="nan" disabled>Ability</option>
+                <option value="strength">STR</option>
+                <option value="dexterity" selected>DEX</option>
+                <option value="constitution">CON</option>
+                <option value="intelligence">INT</option>
+                <option value="wisdom">WIS</option>
+                <option value="charisma">CHA</option>
+            </select>
+
+            <select class="skill-sleightofhand-prof dropdown" name="attr_sleightofhand_proficiency">
+                <option value="nan" disabled>Proficiency</option>
+                <option value="no" selected>No</option>
+                <option value="jack">Jack of All Trades</option>
+                <option value="proficient">Proficient</option>
+                <option value="expert">Expertise</option>
+
+                <input type="number" class="skill-sleightofhand-bonus input-skills-page" value="0"
+                    name="attr_sleightofhand_bonus" />
+                <span class="skill-sleightofhand-total input-skills-page" value="0"
+                    name="attr_sleightofhand_total"></span>
+                <span class="skill-sleightofhand-passive input-skills-page"
+                    style="background-color: var(--disabled-input-color-2);" value="0"
+                    name="attr_sleightofhand_passive"></span>
+            </select>
+            <!-- sleightofhand Skill End -->
+
+            <!-- stealth Start -->
+            <button type='action' class='skill-stealth-setting-button gear-button' style='font-family:Pictos;'
+                name='act_stealth_settings'>y</button>
+            <button type='action' class='skill-stealth-roll-button roll-button' name='act_stealth_roll'>t</button>
+            <div class="skill-stealth-text ">
+                Stealth
+            </div>
+            <select class="skill-stealth-ability dropdown" name="attr_stealth_ability" hidden>
+                <option value="nan" disabled>Ability</option>
+                <option value="strength">STR</option>
+                <option value="dexterity" selected>DEX</option>
+                <option value="constitution">CON</option>
+                <option value="intelligence">INT</option>
+                <option value="wisdom">WIS</option>
+                <option value="charisma">CHA</option>
+            </select>
+
+            <select class="skill-stealth-prof dropdown" name="attr_stealth_proficiency">
+                <option value="nan" disabled>Proficiency</option>
+                <option value="no" selected>No</option>
+                <option value="jack">Jack of All Trades</option>
+                <option value="proficient">Proficient</option>
+                <option value="expert">Expertise</option>
+
+                <input type="number" class="skill-stealth-bonus input-skills-page" value="0"
+                    name="attr_stealth_bonus" />
+                <span class="skill-stealth-total input-skills-page" value="0" name="attr_stealth_total"></span>
+                <span class="skill-stealth-passive input-skills-page"
+                    style="background-color: var(--disabled-input-color-2);" value="0"
+                    name="attr_stealth_passive"></span>
+            </select>
+            <!-- stealth Skill End -->
+
+            <!-- survival Start -->
+            <button type='action' class='skill-survival-setting-button gear-button' style='font-family:Pictos;'
+                name='act_survival_settings'>y</button>
+            <button type='action' class='skill-survival-roll-button roll-button' name='act_survival_roll'>t</button>
+            <div class="skill-survival-text ">
+                Survival
+            </div>
+            <select class="skill-survival-ability dropdown" name="attr_survival_ability" hidden>
+                <option value="nan" disabled>Ability</option>
+                <option value="strength">STR</option>
+                <option value="dexterity">DEX</option>
+                <option value="constitution">CON</option>
+                <option value="intelligence">INT</option>
+                <option value="wisdom" selected>WIS</option>
+                <option value="charisma">CHA</option>
+            </select>
+
+            <select class="skill-survival-prof dropdown" name="attr_survival_proficiency">
+                <option value="nan" disabled>Proficiency</option>
+                <option value="no" selected>No</option>
+                <option value="jack">Jack of All Trades</option>
+                <option value="proficient">Proficient</option>
+                <option value="expert">Expertise</option>
+
+                <input type="number" class="skill-survival-bonus input-skills-page" value="0"
+                    name="attr_survival_bonus" />
+                <span class="skill-survival-total input-skills-page" value="0" name="attr_survival_total"></span>
+                <span class="skill-survival-passive input-skills-page"
+                    style="background-color: var(--disabled-input-color-2);" value="0"
+                    name="attr_survival_passive"></span>
+            </select>
+            <!-- survival Skill End -->
+
+        </div>
+
+        <div class="skill-list-custom-left-container">
+            <div class="skills-label-block light-label-bar">
+            </div>
+            <div class="skills-label-1-text ">
+                Skill
+            </div>
+            <div class="skills-label-3-text ">
+                Prof?
+            </div>
+            <div class="skills-label-4-text ">
+                Bonus
+            </div>
+            <div class="skills-label-5-text ">
+                Total
+            </div>
+            <div class="skills-label-6-text ">
+                Pass
+            </div>
+
+            <!-- custom_1 Skill Start -->
+            <button type='action' class='skill-custom_1-setting-button gear-button' style='font-family:Pictos;'
+                name='act_custom_1_settings'>y</button>
+            <button type='action' class='skill-custom_1-roll-button roll-button' name='act_custom_1_roll'>t</button>
+            <input type="text" class="skill-custom_1-text input" name="attr_skill_custom_1" value=custom_1 />
+            <select class="skill-custom_1-ability dropdown" name="attr_custom_1_ability" hidden>
+                <option value="nan" disabled>Ability</option>
+                <option value="strength">STR</option>
+                <option value="dexterity">DEX</option>
+                <option value="constitution">CON</option>
+                <option value="intelligence">INT</option>
+                <option value="wisdom">WIS</option>
+                <option value="charisma">CHA</option>
+            </select>
+
+            <select class="skill-custom_1-prof dropdown" name="attr_custom_1_proficiency">
+                <option value="nan" disabled>Proficiency</option>
+                <option value="no" selected>No</option>
+                <option value="jack">Jack of All Trades</option>
+                <option value="proficient">Proficient</option>
+                <option value="expert">Expertise</option>
+
+                <input type="number" class="skill-custom_1-bonus input-skills-page" value="0"
+                    name="attr_custom_1_bonus" />
+                <span class="skill-custom_1-total input-skills-page" value="0" name="attr_custom_1_total"></span>
+                <span class="skill-custom_1-passive input-skills-page"
+                    style="background-color: var(--disabled-input-color-2);" value="0"
+                    name="attr_custom_1_passive"></span>
+            </select>
+            <!-- custom_1 Skill End -->
+
+            <!-- custom_2 Skill Start -->
+            <button type='action' class='skill-custom_2-setting-button gear-button' style='font-family:Pictos;'
+                name='act_custom_2_settings'>y</button>
+            <button type='action' class='skill-custom_2-roll-button roll-button' name='act_custom_2_roll'>t</button>
+            <input type="text" class="skill-custom_2-text input" name="attr_skill_custom_2" value=custom_2 />
+            <select class="skill-custom_2-ability dropdown" name="attr_custom_2_ability" hidden>
+                <option value="nan" disabled>Ability</option>
+                <option value="strength">STR</option>
+                <option value="dexterity">DEX</option>
+                <option value="constitution">CON</option>
+                <option value="intelligence">INT</option>
+                <option value="wisdom">WIS</option>
+                <option value="charisma">CHA</option>
+            </select>
+
+            <select class="skill-custom_2-prof dropdown" name="attr_custom_2_proficiency">
+                <option value="nan" disabled>Proficiency</option>
+                <option value="no" selected>No</option>
+                <option value="jack">Jack of All Trades</option>
+                <option value="proficient">Proficient</option>
+                <option value="expert">Expertise</option>
+
+                <input type="number" class="skill-custom_2-bonus input-skills-page" value="0"
+                    name="attr_custom_2_bonus" />
+                <span class="skill-custom_2-total input-skills-page" value="0" name="attr_custom_2_total"></span>
+                <span class="skill-custom_2-passive input-skills-page"
+                    style="background-color: var(--disabled-input-color-2);" value="0"
+                    name="attr_custom_2_passive"></span>
+            </select>
+            <!-- custom_2 Skill End -->
+
+            <!-- custom_3 Skill Start -->
+            <button type='action' class='skill-custom_3-setting-button gear-button' style='font-family:Pictos;'
+                name='act_custom_3_settings'>y</button>
+            <button type='action' class='skill-custom_3-roll-button roll-button' name='act_custom_3_roll'>t</button>
+            <input type="text" class="skill-custom_3-text input" name="attr_skill_custom_3" value=custom_3 />
+            <select class="skill-custom_3-ability dropdown" name="attr_custom_3_ability" hidden>
+                <option value="nan" disabled>Ability</option>
+                <option value="strength">STR</option>
+                <option value="dexterity">DEX</option>
+                <option value="constitution">CON</option>
+                <option value="intelligence">INT</option>
+                <option value="wisdom">WIS</option>
+                <option value="charisma">CHA</option>
+            </select>
+
+            <select class="skill-custom_3-prof dropdown" name="attr_custom_3_proficiency">
+                <option value="nan" disabled>Proficiency</option>
+                <option value="no" selected>No</option>
+                <option value="jack">Jack of All Trades</option>
+                <option value="proficient">Proficient</option>
+                <option value="expert">Expertise</option>
+
+                <input type="number" class="skill-custom_3-bonus input-skills-page" value="0"
+                    name="attr_custom_3_bonus" />
+                <span class="skill-custom_3-total input-skills-page" value="0" name="attr_custom_3_total"></span>
+                <span class="skill-custom_3-passive input-skills-page"
+                    style="background-color: var(--disabled-input-color-2);" value="0"
+                    name="attr_custom_3_passive"></span>
+            </select>
+            <!-- custom_3 Skill End -->
+
+            <!-- custom_4 Skill Start -->
+            <button type='action' class='skill-custom_4-setting-button gear-button' style='font-family:Pictos;'
+                name='act_custom_4_settings'>y</button>
+            <button type='action' class='skill-custom_4-roll-button roll-button' name='act_custom_4_roll'>t</button>
+            <input type="text" class="skill-custom_4-text input" name="attr_skill_custom_4" value=custom_4 />
+            <select class="skill-custom_4-ability dropdown" name="attr_custom_4_ability" hidden>
+                <option value="nan" disabled>Ability</option>
+                <option value="strength">STR</option>
+                <option value="dexterity">DEX</option>
+                <option value="constitution">CON</option>
+                <option value="intelligence">INT</option>
+                <option value="wisdom">WIS</option>
+                <option value="charisma">CHA</option>
+            </select>
+
+            <select class="skill-custom_4-prof dropdown" name="attr_custom_4_proficiency">
+                <option value="nan" disabled>Proficiency</option>
+                <option value="no" selected>No</option>
+                <option value="jack">Jack of All Trades</option>
+                <option value="proficient">Proficient</option>
+                <option value="expert">Expertise</option>
+
+                <input type="number" class="skill-custom_4-bonus input-skills-page" value="0"
+                    name="attr_custom_4_bonus" />
+                <span class="skill-custom_4-total input-skills-page" value="0" name="attr_custom_4_total"></span>
+                <span class="skill-custom_4-passive input-skills-page"
+                    style="background-color: var(--disabled-input-color-2);" value="0"
+                    name="attr_custom_4_passive"></span>
+            </select>
+            <!-- custom_4 Skill End -->
+
+            <!-- custom_5 Skill Start -->
+            <button type='action' class='skill-custom_5-setting-button gear-button' style='font-family:Pictos;'
+                name='act_custom_5_settings'>y</button>
+            <button type='action' class='skill-custom_5-roll-button roll-button' name='act_custom_5_roll'>t</button>
+            <input type="text" class="skill-custom_5-text input" name="attr_skill_custom_5" value=custom_5 />
+            <select class="skill-custom_5-ability dropdown" name="attr_custom_5_ability" hidden>
+                <option value="nan" disabled>Ability</option>
+                <option value="strength">STR</option>
+                <option value="dexterity">DEX</option>
+                <option value="constitution">CON</option>
+                <option value="intelligence">INT</option>
+                <option value="wisdom">WIS</option>
+                <option value="charisma">CHA</option>
+            </select>
+
+            <select class="skill-custom_5-prof dropdown" name="attr_custom_5_proficiency">
+                <option value="nan" disabled>Proficiency</option>
+                <option value="no" selected>No</option>
+                <option value="jack">Jack of All Trades</option>
+                <option value="proficient">Proficient</option>
+                <option value="expert">Expertise</option>
+
+                <input type="number" class="skill-custom_5-bonus input-skills-page" value="0"
+                    name="attr_custom_5_bonus" />
+                <span class="skill-custom_5-total input-skills-page" value="0" name="attr_custom_5_total"></span>
+                <span class="skill-custom_5-passive input-skills-page"
+                    style="background-color: var(--disabled-input-color-2);" value="0"
+                    name="attr_custom_5_passive"></span>
+            </select>
+            <!-- custom_5 Skill End -->
+        </div>
+
+        <div class="skill-list-custom-right-container">
+            <div class="skills-label-block light-label-bar">
+            </div>
+            <div class="skills-label-1-text ">
+                Skill
+            </div>
+            <div class="skills-label-3-text ">
+                Prof?
+            </div>
+            <div class="skills-label-4-text ">
+                Bonus
+            </div>
+            <div class="skills-label-5-text ">
+                Total
+            </div>
+            <div class="skills-label-6-text ">
+                Pass
+            </div>
+
+
+            <!-- custom_6 Skill Start -->
+            <button type='action' class='skill-custom_6-setting-button gear-button' style='font-family:Pictos;'
+                name='act_custom_6_settings'>y</button>
+            <button type='action' class='skill-custom_6-roll-button roll-button' name='act_custom_6_roll'>t</button>
+            <input type="text" class="skill-custom_6-text input" name="attr_skill_custom_6" value=custom_6 />
+            <select class="skill-custom_6-ability dropdown" name="attr_custom_6_ability" hidden>
+                <option value="nan" disabled>Ability</option>
+                <option value="strength">STR</option>
+                <option value="dexterity">DEX</option>
+                <option value="constitution">CON</option>
+                <option value="intelligence">INT</option>
+                <option value="wisdom">WIS</option>
+                <option value="charisma">CHA</option>
+            </select>
+
+            <select class="skill-custom_6-prof dropdown" name="attr_custom_6_proficiency">
+                <option value="nan" disabled>Proficiency</option>
+                <option value="no" selected>No</option>
+                <option value="jack">Jack of All Trades</option>
+                <option value="proficient">Proficient</option>
+                <option value="expert">Expertise</option>
+
+                <input type="number" class="skill-custom_6-bonus input-skills-page" value="0"
+                    name="attr_custom_6_bonus" />
+                <span class="skill-custom_6-total input-skills-page" value="0" name="attr_custom_6_total"></span>
+                <span class="skill-custom_6-passive input-skills-page"
+                    style="background-color: var(--disabled-input-color-2);" value="0"
+                    name="attr_custom_6_passive"></span>
+            </select>
+            <!-- custom_6 Skill End -->
+
+            <!-- custom_7 Skill Start -->
+            <button type='action' class='skill-custom_7-setting-button gear-button' style='font-family:Pictos;'
+                name='act_custom_7_settings'>y</button>
+            <button type='action' class='skill-custom_7-roll-button roll-button' name='act_custom_7_roll'>t</button>
+            <input type="text" class="skill-custom_7-text input" name="attr_skill_custom_7" value=custom_7 />
+            <select class="skill-custom_7-ability dropdown" name="attr_custom_7_ability" hidden>
+                <option value="nan" disabled>Ability</option>
+                <option value="strength">STR</option>
+                <option value="dexterity">DEX</option>
+                <option value="constitution">CON</option>
+                <option value="intelligence">INT</option>
+                <option value="wisdom">WIS</option>
+                <option value="charisma">CHA</option>
+            </select>
+
+            <select class="skill-custom_7-prof dropdown" name="attr_custom_7_proficiency">
+                <option value="nan" disabled>Proficiency</option>
+                <option value="no" selected>No</option>
+                <option value="jack">Jack of All Trades</option>
+                <option value="proficient">Proficient</option>
+                <option value="expert">Expertise</option>
+
+                <input type="number" class="skill-custom_7-bonus input-skills-page" value="0"
+                    name="attr_custom_7_bonus" />
+                <span class="skill-custom_7-total input-skills-page" value="0" name="attr_custom_7_total"></span>
+                <span class="skill-custom_7-passive input-skills-page"
+                    style="background-color: var(--disabled-input-color-2);" value="0"
+                    name="attr_custom_7_passive"></span>
+            </select>
+            <!-- custom_7 Skill End -->
+
+            <!-- custom_8 Skill Start -->
+            <button type='action' class='skill-custom_8-setting-button gear-button' style='font-family:Pictos;'
+                name='act_custom_8_settings'>y</button>
+            <button type='action' class='skill-custom_8-roll-button roll-button' name='act_custom_8_roll'>t</button>
+            <input type="text" class="skill-custom_8-text input" name="attr_skill_custom_8" value=custom_8 />
+            <select class="skill-custom_8-ability dropdown" name="attr_custom_8_ability" hidden>
+                <option value="nan" disabled>Ability</option>
+                <option value="strength">STR</option>
+                <option value="dexterity">DEX</option>
+                <option value="constitution">CON</option>
+                <option value="intelligence">INT</option>
+                <option value="wisdom">WIS</option>
+                <option value="charisma">CHA</option>
+            </select>
+
+            <select class="skill-custom_8-prof dropdown" name="attr_custom_8_proficiency">
+                <option value="nan" disabled>Proficiency</option>
+                <option value="no" selected>No</option>
+                <option value="jack">Jack of All Trades</option>
+                <option value="proficient">Proficient</option>
+                <option value="expert">Expertise</option>
+
+                <input type="number" class="skill-custom_8-bonus input-skills-page" value="0"
+                    name="attr_custom_8_bonus" />
+                <span class="skill-custom_8-total input-skills-page" value="0" name="attr_custom_8_total"></span>
+                <span class="skill-custom_8-passive input-skills-page"
+                    style="background-color: var(--disabled-input-color-2);" value="0"
+                    name="attr_custom_8_passive"></span>
+            </select>
+            <!-- custom_8 Skill End -->
+
+            <!-- custom_9 Skill Start -->
+            <button type='action' class='skill-custom_9-setting-button gear-button' style='font-family:Pictos;'
+                name='act_custom_9_settings'>y</button>
+            <button type='action' class='skill-custom_9-roll-button roll-button' name='act_custom_9_roll'>t</button>
+            <input type="text" class="skill-custom_9-text input" name="attr_skill_custom_9" value=custom_9 />
+            <select class="skill-custom_9-ability dropdown" name="attr_custom_9_ability" hidden>
+                <option value="nan" disabled>Ability</option>
+                <option value="strength">STR</option>
+                <option value="dexterity">DEX</option>
+                <option value="constitution">CON</option>
+                <option value="intelligence">INT</option>
+                <option value="wisdom">WIS</option>
+                <option value="charisma">CHA</option>
+            </select>
+
+            <select class="skill-custom_9-prof dropdown" name="attr_custom_9_proficiency">
+                <option value="nan" disabled>Proficiency</option>
+                <option value="no" selected>No</option>
+                <option value="jack">Jack of All Trades</option>
+                <option value="proficient">Proficient</option>
+                <option value="expert">Expertise</option>
+
+                <input type="number" class="skill-custom_9-bonus input-skills-page" value="0"
+                    name="attr_custom_9_bonus" />
+                <span class="skill-custom_9-total input-skills-page" value="0" name="attr_custom_9_total"></span>
+                <span class="skill-custom_9-passive input-skills-page"
+                    style="background-color: var(--disabled-input-color-2);" value="0"
+                    name="attr_custom_9_passive"></span>
+            </select>
+            <!-- custom_9 Skill End -->
+
+            <!-- custom_10 Skill Start -->
+            <button type='action' class='skill-custom_10-setting-button gear-button' style='font-family:Pictos;'
+                name='act_custom_10_settings'>y</button>
+            <button type='action' class='skill-custom_10-roll-button roll-button' name='act_custom_10_roll'>t</button>
+            <input type="text" class="skill-custom_10-text input" name="attr_skill_custom_10" value=custom_10 />
+            <select class="skill-custom_10-ability dropdown" name="attr_custom_10_ability" hidden>
+                <option value="nan" disabled>Ability</option>
+                <option value="strength">STR</option>
+                <option value="dexterity">DEX</option>
+                <option value="constitution">CON</option>
+                <option value="intelligence">INT</option>
+                <option value="wisdom">WIS</option>
+                <option value="charisma">CHA</option>
+            </select>
+
+            <select class="skill-custom_10-prof dropdown" name="attr_custom_10_proficiency">
+                <option value="nan" disabled>Proficiency</option>
+                <option value="no" selected>No</option>
+                <option value="jack">Jack of All Trades</option>
+                <option value="proficient">Proficient</option>
+                <option value="expert">Expertise</option>
+
+                <input type="number" class="skill-custom_10-bonus input-skills-page" value="0"
+                    name="attr_custom_10_bonus" />
+                <span class="skill-custom_10-total input-skills-page" value="0" name="attr_custom_10_total"></span>
+                <span class="skill-custom_10-passive input-skills-page"
+                    style="background-color: var(--disabled-input-color-2);" value="0"
+                    name="attr_custom_10_passive"></span>
+            </select>
+            <!-- custom_10 Skill End -->
+        </div>
+
+        <input type="hidden" class="skill-settings-toggle" name="attr_skill_settings_toggle" value="hide"></input>
+        <div class="skills-menu-darken" style="z-index: 20">
+        </div>
+        <div class="skills-menu-popup" style="z-index: 21">
+            <div class="skills-menu-header-block dark-label-bar">
+                <span name="attr_skill_settings_active"> </span>
+            </div>
+            <button type="action" class="skill-menu-exit-button roll-button" name="act_hide_skills_settings">X</button>
+            <input type="hidden" class="skill-settings-toggle" name="attr_skill_settings_toggle" value="hide"></input>
+            <div class="skill-menu-text-1">
+                Skill Ability
+            </div>
+            <input type="hidden" class="skill-settings-toggle" name="attr_skill_settings_toggle" value="hide"></input>
+            <select class='skill-menu-dropdown-1 dropdown sm-acrobatics' style='width:150px'
+                name='attr_acrobatics_ability'>
+                <option value='nan' disabled>Ability</option>
+                <option value='strength'>Strength</option>
+                <option value='dexterity' selected>Dexterity</option>
+                <option value='constitution'>Constitution</option>
+                <option value='intelligence'>Intelligence</option>
+                <option value='wisdom'>Wisdom</option>
+                <option value='charisma'>Charisma</option>
+            </select>
+            <select class='skill-menu-dropdown-1 dropdown sm-animalhandling' style='width:150px'
+                name='attr_animalhandling_ability'>
+                <option value='nan' disabled>Ability</option>
+                <option value='strength'>Strength</option>
+                <option value='dexterity'>Dexterity</option>
+                <option value='constitution'>Constitution</option>
+                <option value='intelligence'>Intelligence</option>
+                <option value='wisdom' selected>Wisdom</option>
+                <option value='charisma'>Charisma</option>
+            </select>
+            <select class='skill-menu-dropdown-1 dropdown sm-arcana' style='width:150px' name='attr_arcana_ability'>
+                <option value='nan' disabled>Ability</option>
+                <option value='strength'>Strength</option>
+                <option value='dexterity'>Dexterity</option>
+                <option value='constitution'>Constitution</option>
+                <option value='intelligence' selected>Intelligence</option>
+                <option value='wisdom'>Wisdom</option>
+                <option value='charisma'>Charisma</option>
+            </select>
+            <select class='skill-menu-dropdown-1 dropdown sm-athletics' style='width:150px'
+                name='attr_athletics_ability'>
+                <option value='nan' disabled>Ability</option>
+                <option value='strength' selected>Strength</option>
+                <option value='dexterity'>Dexterity</option>
+                <option value='constitution'>Constitution</option>
+                <option value='intelligence'>Intelligence</option>
+                <option value='wisdom'>Wisdom</option>
+                <option value='charisma'>Charisma</option>
+            </select>
+            <select class='skill-menu-dropdown-1 dropdown sm-deception' style='width:150px'
+                name='attr_deception_ability'>
+                <option value='nan' disabled>Ability</option>
+                <option value='strength'>Strength</option>
+                <option value='dexterity'>Dexterity</option>
+                <option value='constitution'>Constitution</option>
+                <option value='intelligence'>Intelligence</option>
+                <option value='wisdom'>Wisdom</option>
+                <option value='charisma' selected>Charisma</option>
+            </select>
+            <select class='skill-menu-dropdown-1 dropdown sm-history' style='width:150px' name='attr_history_ability'>
+                <option value='nan' disabled>Ability</option>
+                <option value='strength'>Strength</option>
+                <option value='dexterity'>Dexterity</option>
+                <option value='constitution'>Constitution</option>
+                <option value='intelligence' selected>Intelligence</option>
+                <option value='wisdom'>Wisdom</option>
+                <option value='charisma'>Charisma</option>
+            </select>
+            <select class='skill-menu-dropdown-1 dropdown sm-insight' style='width:150px' name='attr_insight_ability'>
+                <option value='nan' disabled>Ability</option>
+                <option value='strength'>Strength</option>
+                <option value='dexterity'>Dexterity</option>
+                <option value='constitution'>Constitution</option>
+                <option value='intelligence'>Intelligence</option>
+                <option value='wisdom' selected>Wisdom</option>
+                <option value='charisma'>Charisma</option>
+            </select>
+            <select class='skill-menu-dropdown-1 dropdown sm-intimidation' style='width:150px'
+                name='attr_intimidation_ability'>
+                <option value='nan' disabled>Ability</option>
+                <option value='strength'>Strength</option>
+                <option value='dexterity'>Dexterity</option>
+                <option value='constitution'>Constitution</option>
+                <option value='intelligence'>Intelligence</option>
+                <option value='wisdom'>Wisdom</option>
+                <option value='charisma' selected>Charisma</option>
+            </select>
+            <select class='skill-menu-dropdown-1 dropdown sm-investigation' style='width:150px'
+                name='attr_investigation_ability'>
+                <option value='nan' disabled>Ability</option>
+                <option value='strength'>Strength</option>
+                <option value='dexterity'>Dexterity</option>
+                <option value='constitution'>Constitution</option>
+                <option value='intelligence' selected>Intelligence</option>
+                <option value='wisdom'>Wisdom</option>
+                <option value='charisma'>Charisma</option>
+            </select>
+            <select class='skill-menu-dropdown-1 dropdown sm-medicine' style='width:150px' name='attr_medicine_ability'>
+                <option value='nan' disabled>Ability</option>
+                <option value='strength'>Strength</option>
+                <option value='dexterity'>Dexterity</option>
+                <option value='constitution'>Constitution</option>
+                <option value='intelligence'>Intelligence</option>
+                <option value='wisdom' selected>Wisdom</option>
+                <option value='charisma'>Charisma</option>
+            </select>
+            <select class='skill-menu-dropdown-1 dropdown sm-nature' style='width:150px' name='attr_nature_ability'>
+                <option value='nan' disabled>Ability</option>
+                <option value='strength'>Strength</option>
+                <option value='dexterity'>Dexterity</option>
+                <option value='constitution'>Constitution</option>
+                <option value='intelligence' selected>Intelligence</option>
+                <option value='wisdom'>Wisdom</option>
+                <option value='charisma'>Charisma</option>
+            </select>
+            <select class='skill-menu-dropdown-1 dropdown sm-perception' style='width:150px'
+                name='attr_perception_ability'>
+                <option value='nan' disabled>Ability</option>
+                <option value='strength'>Strength</option>
+                <option value='dexterity'>Dexterity</option>
+                <option value='constitution'>Constitution</option>
+                <option value='intelligence'>Intelligence</option>
+                <option value='wisdom' selected>Wisdom</option>
+                <option value='charisma'>Charisma</option>
+            </select>
+            <select class='skill-menu-dropdown-1 dropdown sm-performance' style='width:150px'
+                name='attr_performance_ability'>
+                <option value='nan' disabled>Ability</option>
+                <option value='strength'>Strength</option>
+                <option value='dexterity'>Dexterity</option>
+                <option value='constitution'>Constitution</option>
+                <option value='intelligence'>Intelligence</option>
+                <option value='wisdom'>Wisdom</option>
+                <option value='charisma' selected>Charisma</option>
+            </select>
+            <select class='skill-menu-dropdown-1 dropdown sm-persuasion' style='width:150px'
+                name='attr_persuasion_ability'>
+                <option value='nan' disabled>Ability</option>
+                <option value='strength'>Strength</option>
+                <option value='dexterity'>Dexterity</option>
+                <option value='constitution'>Constitution</option>
+                <option value='intelligence'>Intelligence</option>
+                <option value='wisdom'>Wisdom</option>
+                <option value='charisma' selected>Charisma</option>
+            </select>
+            <select class='skill-menu-dropdown-1 dropdown sm-religion' style='width:150px' name='attr_religion_ability'>
+                <option value='nan' disabled>Ability</option>
+                <option value='strength'>Strength</option>
+                <option value='dexterity'>Dexterity</option>
+                <option value='constitution'>Constitution</option>
+                <option value='intelligence' selected>Intelligence</option>
+                <option value='wisdom'>Wisdom</option>
+                <option value='charisma'>Charisma</option>
+            </select>
+            <select class='skill-menu-dropdown-1 dropdown sm-sleightofhand' style='width:150px'
+                name='attr_sleightofhand_ability'>
+                <option value='nan' disabled>Ability</option>
+                <option value='strength'>Strength</option>
+                <option value='dexterity' selected>Dexterity</option>
+                <option value='constitution'>Constitution</option>
+                <option value='intelligence'>Intelligence</option>
+                <option value='wisdom'>Wisdom</option>
+                <option value='charisma'>Charisma</option>
+            </select>
+            <select class='skill-menu-dropdown-1 dropdown sm-stealth' style='width:150px' name='attr_stealth_ability'>
+                <option value='nan' disabled>Ability</option>
+                <option value='strength'>Strength</option>
+                <option value='dexterity' selected>Dexterity</option>
+                <option value='constitution'>Constitution</option>
+                <option value='intelligence'>Intelligence</option>
+                <option value='wisdom'>Wisdom</option>
+                <option value='charisma'>Charisma</option>
+            </select>
+            <select class='skill-menu-dropdown-1 dropdown sm-survival' style='width:150px' name='attr_survival_ability'>
+                <option value='nan' disabled>Ability</option>
+                <option value='strength'>Strength</option>
+                <option value='dexterity'>Dexterity</option>
+                <option value='constitution'>Constitution</option>
+                <option value='intelligence' selected>Intelligence</option>
+                <option value='wisdom'>Wisdom</option>
+                <option value='charisma'>Charisma</option>
+            </select>
+            <select class='skill-menu-dropdown-1 dropdown sm-custom_1' style='width:150px' name='attr_custom_1_ability'>
+                <option value='nan' disabled>Ability</option>
+                <option value='strength' selected>Strength</option>
+                <option value='dexterity'>Dexterity</option>
+                <option value='constitution'>Constitution</option>
+                <option value='intelligence'>Intelligence</option>
+                <option value='wisdom'>Wisdom</option>
+                <option value='charisma'>Charisma</option>
+            </select>
+            <select class='skill-menu-dropdown-1 dropdown sm-custom_2' style='width:150px' name='attr_custom_2_ability'>
+                <option value='nan' disabled>Ability</option>
+                <option value='strength' selected>Strength</option>
+                <option value='dexterity'>Dexterity</option>
+                <option value='constitution'>Constitution</option>
+                <option value='intelligence'>Intelligence</option>
+                <option value='wisdom'>Wisdom</option>
+                <option value='charisma'>Charisma</option>
+            </select>
+            <select class='skill-menu-dropdown-1 dropdown sm-custom_3' style='width:150px' name='attr_custom_3_ability'>
+                <option value='nan' disabled>Ability</option>
+                <option value='strength' selected>Strength</option>
+                <option value='dexterity'>Dexterity</option>
+                <option value='constitution'>Constitution</option>
+                <option value='intelligence'>Intelligence</option>
+                <option value='wisdom'>Wisdom</option>
+                <option value='charisma'>Charisma</option>
+            </select>
+            <select class='skill-menu-dropdown-1 dropdown sm-custom_4' style='width:150px' name='attr_custom_4_ability'>
+                <option value='nan' disabled>Ability</option>
+                <option value='strength' selected>Strength</option>
+                <option value='dexterity'>Dexterity</option>
+                <option value='constitution'>Constitution</option>
+                <option value='intelligence'>Intelligence</option>
+                <option value='wisdom'>Wisdom</option>
+                <option value='charisma'>Charisma</option>
+            </select>
+            <select class='skill-menu-dropdown-1 dropdown sm-custom_5' style='width:150px' name='attr_custom_5_ability'>
+                <option value='nan' disabled>Ability</option>
+                <option value='strength' selected>Strength</option>
+                <option value='dexterity'>Dexterity</option>
+                <option value='constitution'>Constitution</option>
+                <option value='intelligence'>Intelligence</option>
+                <option value='wisdom'>Wisdom</option>
+                <option value='charisma'>Charisma</option>
+            </select>
+            <select class='skill-menu-dropdown-1 dropdown sm-custom_6' style='width:150px' name='attr_custom_6_ability'>
+                <option value='nan' disabled>Ability</option>
+                <option value='strength' selected>Strength</option>
+                <option value='dexterity'>Dexterity</option>
+                <option value='constitution'>Constitution</option>
+                <option value='intelligence'>Intelligence</option>
+                <option value='wisdom'>Wisdom</option>
+                <option value='charisma'>Charisma</option>
+            </select>
+            <select class='skill-menu-dropdown-1 dropdown sm-custom_7' style='width:150px' name='attr_custom_7_ability'>
+                <option value='nan' disabled>Ability</option>
+                <option value='strength' selected>Strength</option>
+                <option value='dexterity'>Dexterity</option>
+                <option value='constitution'>Constitution</option>
+                <option value='intelligence'>Intelligence</option>
+                <option value='wisdom'>Wisdom</option>
+                <option value='charisma'>Charisma</option>
+            </select>
+            <select class='skill-menu-dropdown-1 dropdown sm-custom_8' style='width:150px' name='attr_custom_8_ability'>
+                <option value='nan' disabled>Ability</option>
+                <option value='strength' selected>Strength</option>
+                <option value='dexterity'>Dexterity</option>
+                <option value='constitution'>Constitution</option>
+                <option value='intelligence'>Intelligence</option>
+                <option value='wisdom'>Wisdom</option>
+                <option value='charisma'>Charisma</option>
+            </select>
+            <select class='skill-menu-dropdown-1 dropdown sm-custom_9' style='width:150px' name='attr_custom_9_ability'>
+                <option value='nan' disabled>Ability</option>
+                <option value='strength' selected>Strength</option>
+                <option value='dexterity'>Dexterity</option>
+                <option value='constitution'>Constitution</option>
+                <option value='intelligence'>Intelligence</option>
+                <option value='wisdom'>Wisdom</option>
+                <option value='charisma'>Charisma</option>
+            </select>
+            <select class='skill-menu-dropdown-1 dropdown sm-custom_10' style='width:150px'
+                name='attr_custom_10_ability'>
+                <option value='nan' disabled>Ability</option>
+                <option value='strength' selected>Strength</option>
+                <option value='dexterity'>Dexterity</option>
+                <option value='constitution'>Constitution</option>
+                <option value='intelligence'>Intelligence</option>
+                <option value='wisdom'>Wisdom</option>
+                <option value='charisma'>Charisma</option>
+            </select>
+
+        </div>
+
+    </div>
+
+    <div class="background-page">
+        <div class="appearance-header-block dark-label-bar">
+            Appearance, Vision, Languages, and Alignment
+        </div>
+        <div class="appearance-block">
+            <input type="text" class=" appearance-gender-box input" name="attr_gender" />
+            <div class="appearance-gender-text">Gender</div>
+            <input type="text" class=" appearance-age-box input" name="attr_age" />
+            <div class="appearance-age-text">Age</div>
+            <input type="text" class=" appearance-height-box input" name="attr_height" />
+            <div class="appearance-height-text">Height</div>
+            <input type="text" class=" appearance-weight-box input" name="attr_weight" />
+            <div class="appearance-weight-text">Weight</div>
+            <input type="text" class=" appearance-eyes-box input" name="attr_eyes" />
+            <div class="appearance-eyes-text">Eyes</div>
+            <input type="text" class=" appearance-hair-box input" name="attr_hair" />
+            <div class="appearance-hair-text">Hair</div>
+            <input type="text" class=" appearance-size-box input" name="attr_size" />
+            <div class="appearance-size-text">Size</div>
+            <input type="text" class=" appearance-vision-box input" name="attr_vision" />
+            <div class="appearance-vision-text">Vision</div>
+            <input type="text" class=" appearance-languages-box input" name="attr_languages" />
+            <div class="appearance-languages-text">Known Languages</div>
+            <input type="text" class=" appearance-alignment-box input" name="attr_alignment" />
+            <div class="appearance-alignment-text">Alginment</div>
+        </div>
+
+        <div class="background-header-block dark-label-bar">
+            Background, Traits, Ideals, Bonds, and Flaws
+        </div>
+        <div class="background-block">
+            <div class="background-text-head-1 light-label-bar">Background</div>
+            <input type="text" class="background-box-1 input" name="attr_background" />
+
+            <div class="background-text-head-2 light-label-bar">Personality Traits</div>
+            <textarea spellcheck="false" rows="10" class="background-box-2 bg-textfield"
+                name="attr_personality"></textarea>
+
+            <div class="background-text-head-3 light-label-bar">Ideals</div>
+            <textarea spellcheck="false" rows="10" class="background-box-3 bg-textfield" name="attr_ideals"></textarea>
+
+            <div class="background-text-head-4 light-label-bar">Bonds</div>
+            <textarea spellcheck="false" rows="10" class="background-box-4 bg-textfield" name="attr_bonds"></textarea>
+
+            <div class="background-text-head-5 light-label-bar">Flaws</div>
+            <textarea spellcheck="false" rows="10" class="background-box-5 bg-textfield" name="attr_flaws"></textarea>
+
+            <div class="racial-traits-header light-label-bar">Racial Traits</div>
+            <textarea spellcheck="false" rows="20" class="racial-traits-body rt-textfield"
+                style="height: 370px; resize: none;" name="attr_racial_traits"></textarea>
+        </div>
+
+        <div class="equipment-header-block dark-label-bar">
+            Equipment Proficiencies
+        </div>
+
+        <div class="equipment-body-block">
+            <div class="equipment-text-head-1 light-label-bar">Armour Proficiencies</div>
+            <textarea spellcheck="false" rows="20" class="equipment-text-body-1 rt-textfield"
+                style="height: 90px; resize: none;" name="attr_armor_prof"></textarea>
+            <div class="equipment-text-head-2 light-label-bar">Weapon Proficiencies</div>
+            <textarea spellcheck="false" rows="20" class="equipment-text-body-2 rt-textfield"
+                style="height: 90px; resize: none;" name="attr_weapon_prof"></textarea>
+            <div class="equipment-text-head-3 light-label-bar">Tool Proficiencies</div>
+            <textarea spellcheck="false" rows="20" class="equipment-text-body-3 rt-textfield"
+                style="height: 90px; resize: none;" name="attr_tool_prof"></textarea>
+        </div>
+
+
+
+        <div class="notes-header-block dark-label-bar">
+            Additional Notes
+        </div>
+        <textarea spellcheck="false" rows="20" class="notes-body-block rt-textfield"
+            style="height: 300px; resize: vertical;" name="attr_notes"></textarea>
+
+    </div>
+
+    
+    <div class="class-page">
+        <div class="class-lvl-resource-header-block dark-label-bar">
+            Class Levels and Resources
+        </div>
+
+        <!-- Settings section start -->
+        <input type="hidden" class="class-page-settings-toggle" name="attr_class_settings_toggle" value="hide"></input>
+        <input type="hidden" class="class-page-resource-settings-toggle" name="attr_resource_settings_toggle" value="hide"></input>
+        <div class="class-menu-darken" style="z-index: 20">
+        </div>
+        <div class="resource-menu-darken" style="z-index: 20">
+        </div>
+
+        <div class="class-page-settings-popup" style="z-index: 21">
+            <div class="class-menu-header-block dark-label-bar">
+                Class Settings
+            </div>
+            <button type="action" class="class-menu-exit-button roll-button" name="act_hide_class_settings">X</button>
+            <div class="class-menu-text-1">
+                Class Hit Die
+            </div>
+            <select name="attr_hit_die_setting" class="class-menu-field-1 dropdown">
+                <option value="nan" hidden> </option>
+                <option value="d6" selected>d6</option>
+                <option value="d8">d8</option>
+                <option value="d10">d10</option>
+                <option value="d12">d12</option>
+            </select>
+            <div class="class-menu-text-2">
+                Subclass
+            </div>
+            <input type="text" class="class-menu-field-2 input" name="attr_subclass_settings"/>
+        </div>
+        <div class="resource-settings-popup" style="z-index: 21">
+            <div class="class-menu-header-block dark-label-bar">
+                Resource Settings
+            </div>
+            <button type="action" class="class-menu-exit-button roll-button" name="act_hide_resource_settings">X</button>
+            <div class="class-menu-text-1">
+                Rechages on
+            </div>
+            <select name="attr_recharge_settings" class="class-menu-field-1 dropdown">
+                <option value="nan" disabled selected>Recharge</option>
+                <option value="short">Short Rest</option>
+                <option value="long">Long Rest</option>
+                <option value="other">Other</option>
+            </select>
+            <hr>
+            <div class="class-menu-text-2">Max Count</div>
+            <input type="number" class="class-menu-field-2  input" name="attr_total_settings" />
+            <div class="class-menu-text-3">Description</div>
+            <textarea spellcheck="false" rows="10" class="class-menu-field-3 rt-textfield" style="height:90px;margin-top: 10px; resize: none;" name="attr_desc_settings"></textarea>
+
+
+        </div>
+
+
+
+
+        <div class="class-lvl-resource-body-block">
+            <div class="class-list-header light-label-bar">
+            </div>
+            <div class="class-list-header light-label-bar" style="padding-left: 11%; padding-top: 2px">
+                <div class="class-list-text"> Class Name</div>
+            </div>
+            <div class="class-list-header" style="padding-left: 83.5%; padding-top: 5px">
+                <div class="class-list-hit-die"> Level</div>
+            </div>
+
+            <div class="class-list">
+                <fieldset class="class-list repeating_classes">
+                    <button type="action" class="resource-settings-container gear-button" style="font-family:Pictos;"
+                        name="act_class-settings">y</button>
+                    <input type="text" class="class-list-text input" name="attr_class" />
+                    <input type="number" class="class-list-level input" name="attr_level" />
+                    <select name="attr_hit-die" class="class-list-hit-die dropdown" style="display:none;">
+                        <option value="d6" selected>d6</option>
+                        <option value="d8">d8</option>
+                        <option value="d10">d10</option>
+                        <option value="d12">d12</option>
+                    </select>
+                </fieldset>
+            </div>
+
+            <div class="class-resource-header light-label-bar">
+            </div>
+            <div class="class-resource-header light-label-bar" style="padding-left: 0%; padding-top: 2px">
+                <div class="class-list-text" > Resource</div>
+            </div>
+            <div class="class-resource-header" style="margin-top: 2px; padding-left: 30%; padding-top: 2px">
+                <div class="class-list-text" > Current</div>
+            </div>
+            <div class="class-resource-header"style="margin-top: 2px; padding-left: 47%; padding-top: 2px">
+                <div class="class-list-text" > Total</div>
+            </div>
+
+            <div class="resource-list" style="padding-left: 0%; padding-top: 2px">
+                <fieldset class="repeating_class-resources">
+                    <div class="class-resource-container">
+                        <button type="action" class="class-list-setting-button gear-button" style="font-family:Pictos;"
+                            name="act_settings">y</button>
+                        <input type="text" class="class-resource-text input" name="attr_resource" />
+                        <input type="number" class="class-resource-count  input" name="attr_count" />
+                        <span class="class-resource-count input" style="padding-top: 1.5%;" name="attr_total" value="0"></span>
+                        <button type='action' class='roll-button class-resource-roll' name='act_roll'>t</button>
+                    </div>
+                    <input type="hidden" class="resource-setting-toggle" name="attr_settingstoggle" value="true" hidden></input>
+                    <div class="class-resource-container resource-settings-container" style="background-color: var(--button-color); display: none;" >
+                        <select name="attr_recharge" class="class-resource-text dropdown" hidden>
+                            <option value="nan" disabled selected>Recharge</option>
+                            <option value="short">Short Rest</option>
+                            <option value="long">Long Rest</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="class-resource-container resource-settings-container" style="background-color: var(--button-color);height:120px; display: none;">
+                    <textarea spellcheck="false" rows="10" class="rt-textfield" style="height:90px;margin-top: 10px; resize: none;" name="attr_desc"></textarea>
+                    </div>
+                </fieldset>
+            </div>
+
+        </div>
+
+        <div class="feats-header-block dark-label-bar">
+            Class Features and Feats
+        </div>
+
+        <div class="feats-body-block">
+            <div class="feats-col-1-header light-label-bar">
+                
+            </div>
+            <div class="feats-col-1-header light-label-bar" style="padding-left: 25%; padding-top: 2px">
+                <div class="class-list-text" > Resource</div>
+            </div>
+
+            <div class="feats-col-2-header light-label-bar">
+                
+            </div>
+            <div class="feats-col-2-header light-label-bar" style="padding-left: 25%; padding-top: 2px">
+                <div class="class-list-text" > Resource</div>
+            </div>
         </div>
     </div>
 </div>
 
 
+<rolltemplate class="sheet-rolltemplate-custom">
+    <div class="sheet-container color-{{color}}">
+        <div class="header">
+            {{#title}}<div class="title">{{title}}</div>{{/title}}
+            {{#subtitle}}<div class="subtitle">{{subtitle}}</div>{{/subtitle}}
+        </div>
+        <div class="content">
+            {{#allprops() title subtitle desc color}}
+            <div class="key">{{key}}</div>
+            <div class="value">{{value}}</div>
+            {{/allprops() title subtitle desc color}}
+            {{#desc}}<div class="desc">{{desc}}</div>{{/desc}}
+        </div>
+    </div>
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-custom-attack">
+    <div class="sheet-rolltemplate-custom">
+        <div class="sheet-container color-{{color}}">
+            <div class="header">
+                {{#title}}<div class="title">{{title}}</div>{{/title}}
+                {{#subtitle}}<div class="subtitle">{{subtitle}}</div>{{/subtitle}}
+            </div>
+            <div class="content">
+                <div class="key">Attack</div>
+                <div class="value">{{Attack}}</div>
+                <div class="key">Damage</div>
+                <div class="value">{{Damage}}{{Type}}</div>
+                <div class="desc">[Crit Damage](!attackroll &#64;[Attack Roll]!&#13;/r {{CritDamage}})</div>
+                {{#desc}}<div class="desc">{{desc}}</div>{{/desc}}
+            </div>
+        </div>
+    </div>
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-custom-attack-2dmg">
+    <div class="sheet-rolltemplate-custom">
+        <div class="sheet-container color-{{color}}">
+            <div class="header">
+                {{#title}}<div class="title">{{title}}</div>{{/title}}
+                {{#subtitle}}<div class="subtitle">{{subtitle}}</div>{{/subtitle}}
+            </div>
+            <div class="content">
+                <div class="key">Attack</div>
+                <div class="value">{{Attack}}</div>
+                <div class="key">Damage</div>
+                <div class="value">{{Damage}}{{Type}}</div>
+                <div class="key">Secondary Damage</div>
+                <div class="value">{{Damage2}}{{Type2}}</div>
+                <div class="desc">[Crit Damage](!attackroll &#64;[Attack Roll]!&#13;/r {{CritDamage}})</div>
+                {{#desc}}<div class="desc">{{desc}}</div>{{/desc}}
+            </div>
+        </div>
+    </div>
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-spell">
+    <div class="sheet-rolltemplate-custom">
+        <div class="sheet-container color-{{color}}">
+            <div class="header">
+                {{#title}}<div class="title">{{title}}</div>{{/title}}
+                {{#subtitle}}<div class="subtitle">{{subtitle}}</div>{{/subtitle}}
+            </div>
+            <div class="content">
+                {{#allprops() title subtitle desc color dc save_success}}
+                <div class="key">{{key}}</div>
+                <div class="value">{{value}}</div>
+                {{/allprops() title subtitle desc color dc save_success}}
+                <div class="value">{{computed::critroll}}</div>
+                {{#dc}}<div class="desc">{{dc}}</div>{{/dc}}
+                {{#dc}}<div class="desc">{{save_success}}</div>{{/dc}}
+                {{#desc}}<div class="desc">{{desc}}</div>{{/desc}}
+            </div>
+        </div>
+    </div>
+</rolltemplate>
+
+
+
 <script type="text/worker">
+    //-------------------------------------------------------------------------------------
+// orcsAsync
+// Compensates for a defect in the underlying Roll20 system, where it "loses context"
+// (forgets which player is active) during asynchronous methods and callbacks, 
+// resulting in error messages like:
+//
+//      Error: Trying to do getAttrs when no character is active in sandbox.
+//
+// Include this script at the top of your character sheet's code setion to have 
+// setTimeout() and setInterval() just start working as expected; no additional setup
+// required.  Additionally, async-safe versions of the typical attribute functions will 
+// be available:
+//
+//      getAttrsAsync
+//      setAttrsAsync
+//      getSectionIDsAsync
+//      
+function isRunningOnServer() { return self.dispatchEvent == undefined; }
+function setActiveCharacterId(charId){
+    var oldAcid=getActiveCharacterId();
+    var msg={"id":"0", "type":"setActiveCharacter", "data":charId};
+    
+    if(isRunningOnServer()==false){ //if in a browser, use "dispatchEvent" to process the message
+        var ev = new CustomEvent("message");
+        ev.data=msg; 
+        self.dispatchEvent(ev);
+    }else{ //otherwise, use the API (server) message processor, "onmessage"
+        self.onmessage({data:msg});
+    }
+    return oldAcid; //return what the value used to be, so calling code can be a little cleaner 
+} 
+var _sIn=setInterval;
+setInterval=function(callback, timeout){
+    var acid=getActiveCharacterId();
+    _sIn(
+        function(){
+            var prevAcid=setActiveCharacterId(acid);
+            callback();
+            setActiveCharacterId(prevAcid);
+        }
+    ,timeout);
+}
+var _sto=setTimeout
+setTimeout=function(callback, timeout){
+    var acid=getActiveCharacterId();
+    _sto(
+        function(){
+            var prevAcid=setActiveCharacterId(acid);
+            callback();
+            setActiveCharacterId(prevAcid);
+        }
+    ,timeout);
+}
+function getAttrsAsync(props){
+    var acid=getActiveCharacterId(); //save the current activeCharacterID in case it has changed when the promise runs 
+    var prevAcid=null;               //local variable defined here, because it needs to be shared across the promise callbacks defined below
+    return new Promise((resolve,reject)=>{
+            prevAcid=setActiveCharacterId(acid);  //in case the activeCharacterId has changed, restore it to what we were expecting and save the current value to restore later
+            try{
+                getAttrs(props,(values)=>{  resolve(values); }); 
+            }
+            catch{ reject(); }
+    }).finally(()=>{
+        setActiveCharacterId(prevAcid); //restore activeCharcterId to what it was when the promise first ran
+    });
+}
+//use the same pattern for each of the following...
+function setAttrsAsync(propObj, options){
+    var acid=getActiveCharacterId(); 
+    var prevAcid=null;               
+    return new Promise((resolve,reject)=>{
+            prevAcid=setActiveCharacterId(acid);  
+            try{
+                setAttrs(propObj,options,(values)=>{ resolve(values); });
+            }
+            catch{ reject(); }
+    }).finally(()=>{
+        setActiveCharacterId(prevAcid); 
+    });
+}
 
+function getSectionIDsAsync(sectionName){
+    var acid = getActiveCharacterId(); 
+    var prevAcid=null;               
+    return new Promise((resolve,reject)=>{
+            prevAcid = setActiveCharacterId(acid);  
+            try{
+                getSectionIDs(sectionName,(values)=>{ resolve(values); });
+            }
+            catch{ reject(); }
+    }).finally(()=>{
+        setActiveCharacterId(prevAcid); 
+    });
+}
 
+/*
+parseRepeatName takes a string name of a repeating attribute (e.g. repeating_inventory_-mjesdf09-32Z_weight). It then returns the section name (repeating_inventory), the row's ID (-mjesdf09-32Z), and the name of the field itself (weight). An example of how to call it is included immediately after it. This makes it easy to figure out what action needs to be taken and/or which section and row in that section needs to be worked on. If passed a regular attribute name (e.g. strength), it simply returns the attribute name.
+*/
+const parseRepeatName = function(string){
+  let match = string.match(/(?:(repeating_[^_]+)_([^_]+)_)?(.+)/);
+  match.shift();
+  return match;
+};
+//  let [section,rowID,field] = parseRepeatName('repeating_inventory_-mjesdf09-32Z_weight');
+/*
+section => repeating_inventory
+rowID => -mjesdf09-32Z
+field => weight
+*/
+
+//////////////////////////////////////////////
+///////////     Helper Section END  ////
+////////////////////////////////////////////
+///////////     Stats Section Start    ////
+//////////////////////////////////////////
 
     // Switch Main Pages
     const pageList = ["core","skills", "background", "class","weapons","spells","armor","inventory","show_all"];
     pageList.forEach(button => {
         on(`clicked:page_${button}`, function() {
 
-            console.log(`${button}`);
             setAttrs({
-                [`main_page_toggle`]: `${button}`
-            });
-            getAttrs([`main_page_toggle`], v =>{
-                console.log(v);
+                [`main_page_toggle`]: `${button}`,
+                [`skill_settings_toggle`]: `hide`,
+                [`class_settings_toggle`]: "hide",
+                [`resource_settings_toggle`]: "hide"
             });
         });
     });
-    const stats = ["strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma",]
-	const skills_dict = {
-		"STR": ["athletics", "custom_STR_1"],
-		"DEX": ["acrobatics", "stealth", "thievery", "performance","custom_DEX_1"],
-		"INT": ["arcana","crafting","investigation","nature","studies","custom_INT_1"],
-		"VIT": ["custom_VIT_1"],
-		"WIS": ["animal_handling","survival","perception","intuition","medicine","custom_WIS_1"],
-		"PER": ["diplomacy","deception","intimidation","custom_PER_1"],
-		"SPT": ["communion","custom_SPT_1"],
-		}
+    
+
+//////////////////////////////////////////////
+///////////     Pages Section END  //////////
+////////////////////////////////////////////
+///////////     Stats Section Start    ////
+//////////////////////////////////////////
+
+    const stats = ["strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma"]
+
 		
-	const skills_display_dict = {
-		"STR": "Strength",
-		"DEX": "Dexterity",
-		"CON": "Constitution",
-		"INT": "Intelligence",
-		"WIS": "Wisdom",
-		"CHA": "Charisma",
-		}
     
     // Changes made to skills
 	stats.forEach(stat => {
-		on(`change:${stat} change:${stat}_save_prof change:prof sheet:opened: change:spellcasting_training change:spellcasting_ability`, function(){					
-			getAttrs([stat], function(values){
-				// Error check for values over 30
-					if (values[stat] > 30){
-						setAttrs({
-							[`${stat}`]: 30
-						});
-						values[stat] = 30
-					}
-					if (stat === "STR"){
-						setAttrs({
-							["carry_capacity"]: values[stat]*15
-						});
-					}
-					if (stat === "VIT"){
-						setAttrs({
-							["death-lvls-max"]: values[stat]
-						});
-					}
+		on(`change:${stat} change:${stat}_save_prof change:prof change:initiative_bonus change:saving_throw_bonus sheet:opened `, async()=>{	
+            var values = await getAttrsAsync([stat, `${stat}_save_prof`,"proficiency_bonus","initiative_bonus",`saving_throw_bonus`]);
+			// Error check for values over 30 and under 0
+			if (values[stat] > 30){
+				setAttrs({[`${stat}`]: 30});
+				values[stat] = 30
+			}
+			if (values[stat] < 0){
+				setAttrs({[`${stat}`]: 0});
+				values[stat] = 0
+			}
 
-					let mod = Math.floor((values[stat]-10)/2);
-					
-					// Update bonuses for stat
-					setAttrs({
-						[`${stat}_modifier`] : mod
-					});
+            // Update carry capacity for strength
+			if (stat === "strength"){
+				setAttrs({["carry_capacity"]: values[stat]*15});
+			}
 
+            //Calculate modifier
+			let mod = Math.floor((values[stat]-10)/2);
+			let save_mod = parseInt(mod) + parseInt(values["saving_throw_bonus"]);
+
+            // Calculate Save mod base on proficiency
+            if (values[`${stat}_save_prof`] === "on"){
+                save_mod+=parseInt(values["proficiency_bonus"])
+            }
+            if (stat === "dexterity"){
+                set_dex_stats(mod)
+            }
+			
+			// Update bonuses for stat
+			setAttrs({
+				[`${stat}_modifier`] : mod,
+				[`${stat}_save_modifier`] : save_mod
 			});
 		});
     });
+
+    //Set Dexterity derivedstats
+    var set_dex_stats = async(dex_mod) =>{
+        var v = await getAttrsAsync(["initiative_bonus"]);
+			setAttrs({
+				["initiative_total"]: dex_mod+parseInt(v['initiative_bonus']),
+				["natural_ac"]: dex_mod+10,
+				["modified_ac"]: dex_mod,
+        });
+    }
+
+
+///////////////////////////////////////////////
+///////////     Stats Section END  ///////////
+/////////////////////////////////////////////
+///////////     Rest Section Start    ////
+///////////////////////////////////////////
+
+    //Stop overloading hit dice
+    on(`change:d6_current_hitdice change:d8_current_hitdice change:d10_current_hitdice change:d12_current_hitdice`, async() =>{
+        var v = await getAttrsAsync([`d6_hitdice`,`d8_hitdice`,`d10_hitdice`,`d12_hitdice`,`d6_current_hitdice`,`d8_current_hitdice`,`d10_current_hitdice`,`d12_current_hitdice`]);
+        setAttrs({
+            [`d6_current_hitdice`]: Math.min(parseInt(v[`d6_current_hitdice`]),v[`d6_hitdice`] ),
+            [`d8_current_hitdice`]: Math.min(parseInt(v[`d8_current_hitdice`]),v[`d8_hitdice`] ),
+            [`d10_current_hitdice`]: Math.min(parseInt(v[`d10_current_hitdice`]),v[`d10_hitdice`] ),
+            [`d12_current_hitdice`]: Math.min(parseInt(v[`d12_current_hitdice`]),v[`d12_hitdice`] ),
+        });
+    });
+
+     //Open Skills Settings
+    on('clicked:long_rest', async() =>{
+        var v = await getAttrsAsync([`d6_hitdice`,`d8_hitdice`,`d10_hitdice`,`d12_hitdice`,`d6_current_hitdice`,`d8_current_hitdice`,`d10_current_hitdice`,`d12_current_hitdice`,`max_hitpoints`]);
+        
+        setAttrs({
+            [`d6_current_hitdice`]: Math.min(parseInt(v[`d6_current_hitdice`])+parseInt( v[`d6_hitdice`]/2),v[`d6_hitdice`] ),
+            [`d8_current_hitdice`]: Math.min(parseInt(v[`d8_current_hitdice`])+parseInt( v[`d8_hitdice`]/2),v[`d8_hitdice`] ),
+            [`d10_current_hitdice`]: Math.min(parseInt(v[`d10_current_hitdice`])+parseInt(v[`d10_hitdice`]/2),v[`d10_hitdice`] ),
+            [`d12_current_hitdice`]: Math.min(parseInt(v[`d12_current_hitdice`])+parseInt(v[`d12_hitdice`]/2),v[`d12_hitdice`] ),
+            [`current_hitpoints`]: v[`max_hitpoints`],
+            [`temp_hitpoints`]: 0,
+            [`ds_fail_1`]: false,
+            [`ds_fail_2`]: false,
+            [`ds_fail_3`]: false,
+            [`ds_success_1`]: false,
+            [`ds_success_2`]: false,
+            [`ds_success_3`]: false
+        });
+    });
+
+
+    on('clicked:short_rest', async() =>{
+            var v = await getAttrsAsync([`d6_hitdice`,`d8_hitdice`,`d10_hitdice`,`d12_hitdice`,`d6_current_hitdice`,`d8_current_hitdice`,`d10_current_hitdice`,`d12_current_hitdice`,`max_hitpoints`]);
+            
+            getSectionIDs("class-resources", async(idarray) =>{
+                //Get all resources info
+                for(var i=0; i < idarray.length; i++) {
+                    let res_count = `repeating_class-resources_${idarray[i]}_count`;
+                    let res_max = `repeating_class-resources_${idarray[i]}_total`;
+                    let res_recharge = `repeating_class-resources_${idarray[i]}_recharge`;
+                    var info = await getAttrsAsync([`${res_count}`,`${res_max}`,`${res_recharge}`]);
+                    console.log(info)
+                    if (info[`${res_count}`] === "short"){
+                        console.log(info)
+                    }
+                }
+            });
+
+
+            setAttrs({
+                [`d6_current_hitdice`]: Math.min(parseInt(v[`d6_current_hitdice`])+parseInt( v[`d6_hitdice`]/2),v[`d6_hitdice`] ),
+                [`d8_current_hitdice`]: Math.min(parseInt(v[`d8_current_hitdice`])+parseInt( v[`d8_hitdice`]/2),v[`d8_hitdice`] ),
+                [`d10_current_hitdice`]: Math.min(parseInt(v[`d10_current_hitdice`])+parseInt(v[`d10_hitdice`]/2),v[`d10_hitdice`] ),
+                [`d12_current_hitdice`]: Math.min(parseInt(v[`d12_current_hitdice`])+parseInt(v[`d12_hitdice`]/2),v[`d12_hitdice`] ),
+                [`current_hitpoints`]: v[`max_hitpoints`],
+                [`temp_hitpoints`]: 0,
+            });
+    });
+
+
+///////////////////////////////////////////////
+///////////     Rest Section END  ///////////
+/////////////////////////////////////////////
+///////////      Resource Section Start    ////
+///////////////////////////////////////////
+
+    on(`clicked:repeating_class-resources:settings`, async(info) =>{
+         var settings = await getAttrsAsync([`repeating_class-resources_settingstoggle`,`repeating_class-resources_desc`,`repeating_class-resources_total`,`repeating_class-resources_recharge`]);
+         let [section,rowID,field] = parseRepeatName(info[`sourceAttribute`]);
+         setAttrs({[`resource_settings_toggle`]: rowID});
+
+         if (settings[`repeating_class-resources_total`] == undefined){
+            settings[`repeating_class-resources_total`] = 0;
+            setAttrs({[`repeating_class-resources_total`]: settings[`repeating_class-resources_total`]});
+         }
+
+        setAttrs({[`desc_settings`]: settings[`repeating_class-resources_desc`]});
+        setAttrs({[`total_settings`]: settings[`repeating_class-resources_total`]});
+        setAttrs({[`recharge_settings`]: settings[`repeating_class-resources_recharge`]});
+         
+    });
+
+    on (`change:repeating_class-resources:count`, function() {
+        getAttrs([`repeating_class-resources_count`,`repeating_class-resources_total` ], function(val){
+            var nTotal = Math.min(parseInt(val[`repeating_class-resources_count`]),parseInt(val[`repeating_class-resources_total`]));
+            setAttrs({[`repeating_class-resources_count`]: nTotal});    
+        });
+    });
+
+    
+    //Open Skills Settings
+    on('clicked:hide_resource_settings', function(){
+            setAttrs({
+                [`resource_settings_toggle`]: "hide"
+            });
+    });
+
+    on(`change:desc_settings`, async(info) =>{
+        if (info["sourceType"] ==="sheetworker"){
+            return;
+        }
+        var nval = info[`newValue`];
+        var settings = await getAttrsAsync([`resource_settings_toggle`]);
+        var trgt_change = "repeating_class-resources_"+settings["resource_settings_toggle"]+"_desc"
+        
+        setAttrsAsync({[`${trgt_change}`]: nval});
+
+        if (nval === "undefined"){
+            setAttrsAsync({[`desc_settings`]: " "});
+        }
+    });
+
+    on(`change:recharge_settings`, async(info) =>{
+        if (info["sourceType"] ==="sheetworker"){
+            return;
+        }
+        var nval = info[`newValue`];
+        var settings = await getAttrsAsync([`resource_settings_toggle`]);
+        var trgt_change = "repeating_class-resources_"+settings["resource_settings_toggle"]+"_recharge"
+        setAttrsAsync({[`${trgt_change}`]: nval});
+    });
+    
+    on(`change:total_settings`, async(info) =>{
+        if (info["sourceType"] ==="sheetworker"){
+            return;
+        }
+        var nval = info[`newValue`];
+        var settings = await getAttrsAsync([`resource_settings_toggle`]);
+        var trgt_change = "repeating_class-resources_"+settings["resource_settings_toggle"]+"_total"
+        
+        setAttrsAsync({[`${trgt_change}`]: nval});
+
+        if (nval === "undefined"){
+            setAttrsAsync({[`total_settings`]: 0});
+        }
+    });
+
+
+///////////////////////////////////////////////
+///////////      Resource Section END  ///////////
+/////////////////////////////////////////////
+///////////     Skills Section Start    ////
+///////////////////////////////////////////
+
+    const skills = ["acrobatics", "animalhandling", "arcana", "athletics", "deception", "history", "insight", "intimidation", "investigation",
+    "medicine", "nature", "perception", "performance", "persuasion", "religion", "sleightofhand", "stealth", "survival", "custom_1", "custom_2",
+     "custom_3", "custom_4", "custom_5", "custom_6", "custom_7", "custom_8", "custom_9", "custom_10"]
+
+     //Open Skills Settings
+    on('clicked:hide_skills_settings', function(){
+            setAttrs({
+                [`skill_settings_toggle`]: "hide"
+            });
+    });
+// #region Skills
+	skills.forEach(skill => {
+        //Enable Settings
+        on(`clicked:${skill}_settings`, async() => {
+            let title = `${skill}`
+            title = String(title).charAt(0).toUpperCase() + String(title).slice(1);
+
+            // Edge Case only two normal roles with spaces in names
+            if (title === "Animalhandling"){
+                title = "Animal Handling"
+            }
+            if (title === "Sleightofhand"){
+                title = "Sleight of Hand"
+            }
+            
+            // Check Custom skill names
+            if (title.includes("Custom")){
+                var v = await getAttrsAsync([`skill_${skill}`]);
+                title = v[`skill_${skill}`]
+                title += " Settings"
+                setAttrs({
+                    [`skill_settings_toggle`]: `${skill}`,
+                    [`skill_settings_active`]: title
+                });                    
+                return;
+            }
+
+            title += " Settings"
+
+            setAttrs({
+                [`skill_settings_toggle`]: `${skill}`,
+                [`skill_settings_active`]: title
+            });
+        });
+
+        // Roll for skills button connections
+		on(`clicked:${skill}_roll`, async() => {	
+            var v = await getAttrsAsync([`${skill}_total`, "character_name", `skill_${skill}`, `skill_check_bonus`]);
+            let title = `${skill}`
+            title = String(title).charAt(0).toUpperCase() + String(title).slice(1);
+
+            // Edge Case only two normal roles with spaces in names
+            if (title === "Animalhandling"){
+                title = "Animal Handling"
+            }
+            if (title === "Sleightofhand"){
+                title = "Sleight of Hand"
+            }
+
+            // Check Custom skill names
+            if (title.includes("Custom")){
+                title = v[`skill_${skill}`]
+            }
+
+
+			startRoll('&{template:custom} {{title='+`${title}`+' Skill Check}} {{subtitle=	 '+v["character_name"]+'}}  {{Roll=[[1d20+'+v[`${skill}_total`]+`+`+parseInt(v[`skill_check_bonus`])+']]}}', (results) => {
+				finishRoll(
+				results.rollId,
+				{
+					
+				});
+			});
+		});
+
+        //Connect stat to skills
+		on(`change:${skill}_ability change:${skill}_bonus change:${skill}_proficiency sheet:opened `, async() =>{
+            //Get Skill Attributes
+            var stat = await getAttrsAsync([`${skill}_ability`,`${skill}_bonus`,`${skill}_proficiency`,`proficiency_bonus`]);
+            var values = await getAttrsAsync([`${stat[`${skill}_ability`]}_modifier`]);
+            //Connect function to ability score 
+		    on(`change:${stat[`${skill}_ability`]}`, function(){
+                set_skill_values(values[`${stat[`${skill}_ability`]}_modifier`],skill,stat[`${skill}_proficiency`],stat[`${skill}_bonus`],stat[`proficiency_bonus`]);
+            });
+            set_skill_values(values[`${stat[`${skill}_ability`]}_modifier`],skill,stat[`${skill}_proficiency`],stat[`${skill}_bonus`],stat[`proficiency_bonus`]);          
+                
+        });
+    });
+
+    // Helper Function to calculate skill bonuses
+    var set_skill_values = function(stat_mod, skill, prof, addtl_bonus, prof_bonus){
+        let bonus = parseInt(stat_mod) + parseInt(addtl_bonus);
+        // Add Prof
+        switch (prof){
+            case 'jack':
+                bonus += parseInt(prof_bonus)/2;
+                break
+            case 'proficient':
+                bonus += parseInt(prof_bonus);
+                break
+            case 'expert':
+                bonus += parseInt(prof_bonus)*2;
+                break
+        }
+
+        setAttrs({
+			[`${skill}_total`] : bonus,
+			[`${skill}_passive`] : bonus+10
+        });
+    }
+////////////////////////////////////////////////
+///////////     Skills Section END  ///////////
+/////////////////////////////////////////////
+///////////      Class Section Start    ////
+///////////////////////////////////////////
+
+
+    on(`clicked:repeating_classes:class-settings`, async(info) =>{
+         let [section,rowID,field] = parseRepeatName(info[`sourceAttribute`]);
+         var hd_trgt = section+rowID+`_hit-die`;
+         var sc_trgt = section+rowID+`_subclass`;
+         var settings = await getAttrsAsync([`repeating_class-resources_settingstoggle`,`${hd_trgt}`,`${sc_trgt}`]);
+
+        await setAttrsAsync({[`hit_die_setting`]: settings[`${hd_trgt}`]});
+        await setAttrsAsync({[`subclass_settings`]: settings[`${sc_trgt}`]});
+        setAttrs({[`class_settings_toggle`]: rowID});
+    });
+
+    on(`clicked:hide_class_settings`, function(){
+        setAttrs({[`class_settings_toggle`]: "hide"});
+    })
+    on(`clicked:hide_class_settings`, function(){
+        setAttrs({[`class_settings_toggle`]: "hide"});
+    })
+
+    on(`change:hit_die_setting`, async(info) =>{
+        if (info["sourceType"] ==="sheetworker"){
+            return;
+        }
+        var nval = info[`newValue`];
+        var settings = await getAttrsAsync([`class_settings_toggle`]);
+
+        var trgt_change = "repeating_classes_"+settings["class_settings_toggle"]+"_hit-die"
+
+        
+        setAttrsAsync({[`${trgt_change}`]: nval.substring(0,3)});
+        
+
+        if (nval === "undefined"){
+            setAttrsAsync({[`hit_die_setting`]: "d6"});
+        }
+    })
+
+    on(`change:subclass_settings`, async(info) =>{
+        if (info["sourceType"] ==="sheetworker"){
+            return;
+        }
+        var nval = info[`newValue`];
+        var settings = await getAttrsAsync([`class_settings_toggle`]);
+
+        var trgt_change = "repeating_classes_"+settings["class_settings_toggle"]+"_subclass"
+        console.log("_________________")
+
+        
+        setAttrsAsync({[`${trgt_change}`]: nval});
+        
+
+        if (nval === "undefined"){
+            setAttrsAsync({[`subclass_settings`]: "",
+                        [`${trgt_change}`]: "_"});
+        }
+    })
+
+    // Update Classes based on repeating section
+	on(`sheet:opened change:repeating_classes remove:repeating_classes`, async(info) => {	
+        getSectionIDs("classes", async(idarray) =>{
+            var classes = "";
+            var subclasses = "";
+            var hd = {
+		        "d6": 0,
+		        "d8": 0,
+		        "d10": 0,
+		        "d12": 0
+		        }
+            var lvl_total = 0
+            //Get all Class info
+            for(var i=0; i < idarray.length; i++) {
+                let c_name = `repeating_classes_${idarray[i]}_class`;
+                let c_hd = `repeating_classes_${idarray[i]}_hit-die`;
+                let c_lvl = `repeating_classes_${idarray[i]}_level`;
+                let c_sub = `repeating_classes_${idarray[i]}_subclass`;
+                var class_info = await getAttrsAsync([`${c_name}`,`${c_hd}`,`${c_lvl}`,`${c_sub}`]);
+                //Cap Classes at 20
+                if (parseInt(class_info[c_lvl]) >= 20){
+                    setAttrs({[`${c_lvl}`] : 20});
+                    class_info[`${c_lvl}`] = 20;
+                }
+                let info = class_info[c_name] + " " + class_info[c_lvl];
+                subclasses += class_info[c_sub]+"/";
+                classes+=info+"/";
+                hd[class_info[c_hd]] += parseInt(class_info[c_lvl]);
+                lvl_total += parseInt(class_info[c_lvl]);
+            }
+            classes = classes.slice(0, -1);
+            subclasses = subclasses.slice(0, -1);
+
+            update_lvl_info(lvl_total);
+            setAttrs({
+			    [`total_level`] : lvl_total,
+			    [`classes`] : classes,
+			    [`subclass`] : subclasses,
+			    [`d6_hitdice`] : hd[`d6`],
+			    [`d8_hitdice`] : hd[`d8`],
+			    [`d10_hitdice`] : hd[`d10`],
+			    [`d12_hitdice`] : hd[`d12`]
+            });
+        });
+    });
+
+    var update_lvl_info = function(lvl){
+        let xp_up = 0;
+        let prof = 1;
+        switch (lvl){
+            case 0:
+                xp_up = "--";
+                prof = 2;
+                break;
+            case 1:
+                xp_up = 300;
+                prof = 2;
+                break;
+            case 2:
+                xp_up = 900;
+                prof = 2;
+                break;
+            case 3:
+                xp_up = 2700;
+                prof = 2;
+                break;
+            case 4:
+                xp_up = 6500;
+                prof = 2;
+                break;
+            case 5:
+                xp_up = 14000;
+                prof = 3;
+                break;
+            case 6:
+                xp_up = 23000;
+                prof = 3
+                break;
+            case 7:
+                xp_up = 34000;
+                prof = 3;
+                break;
+            case 8:
+                xp_up = 48000;
+                prof = 3;
+                break;
+            case 9:
+                xp_up = 64000;
+                prof = 4;
+                break;
+            case 10:
+                xp_up = 85000;
+                prof = 4;
+                break;
+            case 11:
+                xp_up = 100000;
+                prof = 4;
+                break;
+            case 12:
+                xp_up = 120000;
+                prof = 4;
+                break;
+            case 13:
+                xp_up = 140000;
+                prof = 5;
+                break;
+            case 14:
+                xp_up = 165000;
+                prof = 5;
+                break;
+            case 15:
+                xp_up = 195000;
+                prof = 5;
+                break;
+            case 16:
+                xp_up = 225000;
+                prof = 5;
+                break;
+            case 17:
+                xp_up = 265000;
+                prof = 6;
+                break;
+            case 18:
+                xp_up = 305000;
+                prof = 6;
+                break;
+            case 19:
+                xp_up = 355000;
+                prof = 6;
+                break;
+            default:
+                xp_up = "--";
+                prof = 6;
+                break;
+        }
+        setAttrs({
+		    [`exp_next_level`] : xp_up,
+		    [`proficiency_bonus`] : prof
+        });
+    }
+
 
 </script>
